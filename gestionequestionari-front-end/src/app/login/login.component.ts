@@ -32,6 +32,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     if(this.currentUser!=null){
+      this.authenticationService.userRole=this.currentUser.ruolo
       switch (this.currentUser.ruolo) {
         case ('amministratore'): {
           this.router.navigate(['/amministratore']);
