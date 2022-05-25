@@ -1,0 +1,68 @@
+
+
+  <mat-sidenav-container>
+    <mat-sidenav mode="side" opened>
+      <div class="sidenav-nav-item">
+        <mat-toolbar>
+          <div style="height: 50px;text-align: center;">
+            <p style="text-align: center; margin-top: 13px;">GestioneQuestionari</p>
+          </div>
+          </mat-toolbar>
+          <div style="text-align: center; font-size: 30px; margin-top: 10px;">
+            {{currentUser.nome}} {{currentUser.cognome}}
+          </div>
+
+
+    <div class="item">
+    <button (click)="goToProfilo()" mat-button class="menu-button" routerLinkActive="active">
+
+      <span style="margin-left: 5px;"><mat-icon>account_circle</mat-icon>  Profilo</span>
+    </button>
+    </div>
+    <div class="item">
+        <button (click)="logout()" mat-button class="menu-button" routerLinkActive="active">
+
+          <span style="margin-left: 5px;"><mat-icon>exit_to_app</mat-icon>  Log out</span>
+        </button>
+        </div>
+
+      </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content style="background-color: #d6d6d6;" >
+      <div class="content mat-elevation-z8" style="background-color: white; height: auto;">
+
+        <div class="container">
+            <div class="row">
+                <div *ngFor="let q of quest" >
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="section-status card">
+                            <div class="img-container">
+                                <img src="https://i.pinimg.com/originals/0f/8b/28/0f8b2870896edcde8f6149fe2733faaf.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p class="title">
+                                    {{q.titolo}}
+                                </p>
+                                <small class="sub-title mey-text-color-gray">
+                                    {{q.descrizione}}
+                                </small>
+                            </div>
+                            <div class="footer">
+                                <a  class="alink" [routerLink]="['/candidato/questionari/',q.id_questionario]" class="btn btn-primary mey-btn mey-btn-md">
+                                    Fai prova
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+
+            </div>
+        </div>
+
+      </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
+

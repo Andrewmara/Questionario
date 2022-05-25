@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="profile center">
+    <div style="border-bottom: 1px solid black;">
+      <img height="100px" width="100px" src="https://avatars.githubusercontent.com/u/76587897" />
+      <h1 class="heading">{{currentUser.nome}} {{currentUser.cognome}}</h1>
+    </div>
+    <h4 class="heading">Email: {{currentUser.email}}</h4>
+
+    <p></p>
+    <br>
+  </div>
+
+  <div class="table center">
+    <h1>Esiti</h1>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Titolo</th>
+          <th scope="col">Descrizione</th>
+          <th scope="col">Punteggio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let q of results ; let indexOfelement=index;" >
+          <td>{{indexOfelement}}</td>
+          <td>{{q.titolo}}</td>
+          <td>{{q.descrizione}}</td>
+          <td>{{q.punteggio}}</td>
+        </tr>
+
+      </tbody>
+    </table>
+    
+  </div>
+
+
+</div>

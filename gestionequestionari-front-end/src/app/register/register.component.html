@@ -1,0 +1,25 @@
+
+
+<div class="container">
+    <div class="login">
+        <div class="form">
+          <form #form="ngForm" (ngSubmit) = "onSubmit()" class="login-form">
+            <span>Sign Up</span>
+    
+            <input [(ngModel)] = "utente.nome" name="nome" placeholder="nome" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required/>
+            <input [(ngModel)] = "utente.cognome" name="cognome" placeholder="cognome" required />
+            <input [(ngModel)] = "utente.email" name="email" placeholder="email" required />
+            <input [(ngModel)] = "utente.password" name="password" placeholder="password" required />
+
+
+            <mat-icon class="mat-icon-rtl-mirror" svgIcon="thumb-up"></mat-icon>
+            <p style="color: red;"></p>
+            <input type="submit" value="Register" class="submit">
+    
+            <p>or</p>
+            <a routerLink="/">Already have an account?</a>
+          </form>  
+        </div>
+      </div>
+    </div>
+    

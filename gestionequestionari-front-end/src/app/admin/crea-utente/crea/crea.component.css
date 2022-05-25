@@ -1,0 +1,91 @@
+
+
+.container{
+  margin-left: 5px;
+}
+
+.error{
+  color: #f27474;
+  font-weight:normal;
+  text-align: center;
+  font-family: "Raleway Thin", sans-serif;
+  font-size: 0.5cm;
+}
+
+input.ng-invalid.ng-touched{
+  border: 1px red solid;
+}
+
+input.ng-valid.ng-touched{
+  border: 1px rgb(13, 212, 13) solid;
+}
+.help-block{
+  font-size: 15px;
+  animation: fadeIn;
+  animation-duration:0.5s;
+
+
+}
+
+
+
+.title{
+  font-size: 2.2rem;
+
+  padding-bottom: 10px;
+
+  animation: fadeInLeft;
+  animation-duration: 0.5s;
+  font-size: 0.7cm;
+}
+
+
+button{
+  font-size: 5px;
+  animation: fadeIn;
+  animation-duration: 1s;
+
+}
+
+.bott{
+  text-align: end;
+  margin-bottom: 10px;
+}
+
+.content {
+  height: auto;
+  border-radius: 10px;
+  margin: 16px;
+  margin-left: 32px;
+  font-size: 2rem;
+  width: fit-content;
+}
+
+input{
+  width: 100%;
+  animation: fadeIn;
+  animation-duration: 1.5s;
+}
+
+.select{
+  width: 100%;
+  animation: fadeIn;
+  animation-duration: 1.5s;
+}
+
+.success{
+  font-size: 2rem;
+  margin-bottom: 10px;
+
+  font-weight: bold;
+  color: green;
+  padding-bottom: 15px;
+  padding-top: 13px;
+}
+
+label{
+  animation: fadeInLeft;
+  animation-duration: 0.5s;
+}
+
+

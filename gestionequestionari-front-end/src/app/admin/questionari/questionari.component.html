@@ -1,0 +1,30 @@
+
+
+<div class="content mat-elevation-z8" style="background-color: white;">
+  <div class="container">
+
+    <h2 style="margin-left: 5px;" class="title">Questionari presenti</h2>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Titolo</th>
+        <th scope="col">Descrizione</th>
+        <th scope="col">Docente</th>
+        <th scope="col">N.Candidati</th>
+        <th scope="col">M.Punteggi</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let quest of questList; index as i">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{quest.titolo}}</td>
+        <td>{{quest.descrizione}}</td>
+        <td>{{docenti[i]}}</td>
+        <td>{{nCand[i]}}</td>
+        <td>{{media[i]}}%</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>

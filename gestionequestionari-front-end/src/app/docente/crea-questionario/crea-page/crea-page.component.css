@@ -1,0 +1,76 @@
+.content {
+  height: auto;
+  border-radius: 10px;
+  margin: 16px;
+  margin-left: 32px;
+  font-size: 2rem;
+  width: fit-content;
+}
+
+.title{
+  font-size: 2.2rem;
+
+  padding-bottom: 10px;
+
+  animation: fadeInLeft;
+  animation-duration: 0.5s;
+  font-size: 0.7cm;
+}
+
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  align-items: flex-start;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+button:disabled{
+  cursor: pointer;
+  color: #d6d6d6;
+}
+
+.error{
+  color: #f27474;
+  font-weight:normal;
+  text-align: center;
+  font-family: "Raleway Thin", sans-serif;
+  font-size: 0.5cm;
+}
+
+input.ng-invalid.ng-touched{
+  border: 1px red solid;
+}
+
+input.ng-valid.ng-touched{
+  border: 1px rgb(13, 212, 13) solid;
+}
+.help-block{
+  font-size: 15px;
+  animation: fadeIn;
+  animation-duration:0.5s;
+
+}
+
+button{
+  animation: fadeIn;
+  animation-duration:2s;
+}
+
+label{
+  animation: fadeInLeft;
+  animation-duration: 0.5s;
+}
+
+.select{
+  animation: fadeIn;
+  animation-duration: 1.5s;
+}
+
+input{
+  animation: fadeIn;
+  animation-duration: 1.5s;
+}

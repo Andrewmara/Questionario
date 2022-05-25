@@ -1,0 +1,32 @@
+.content {
+  height: auto;
+  border-radius: 10px;
+  margin: 16px;
+  margin-left: 32px;
+  display: flex;
+  font-size: 2rem;
+  width: fit-content;
+}
+
+.container{
+  margin-left: 5px;
+}
+.title{
+  font-size: 0.7cm;
+  animation: fadeInLeft;
+  animation-duration: 0.5s;
+}
+
+td{
+  animation: backInRight;
+  animation-duration: 0.5s;
+}
+tr{
+  animation: fadeIn;
+  animation-duration: 1s;
+}
+
+th{
+  animation: fadeIn;
+  animation-duration: 1s;
+}

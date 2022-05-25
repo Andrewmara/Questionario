@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="login">
+    <div class="form">
+      <form class="login-form">
+        <span >Login</span>
+        <input type="text"
+          class="form-control"
+          id="email" [(ngModel)]="username"
+          placeholder="Enter e-mail address"
+          name="username"/>
+        <input type="password"
+        class="form-control" [(ngModel)]="password"
+        id="password"
+        placeholder="Enter password"
+        name="password" />
+        <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+        <div class="alert alert-success" *ngIf='loginSuccess'>{{successMessage}}</div>
+        <button (click)=handleLogin() >login</button>
+        <p>or</p>
+        <a routerLink="/register">Register</a>
+      </form>  
+    </div>
+  </div>
+</div>

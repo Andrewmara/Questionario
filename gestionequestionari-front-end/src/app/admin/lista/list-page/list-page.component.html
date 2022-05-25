@@ -1,0 +1,28 @@
+
+
+<div class="content mat-elevation-z8" style="background-color: white;">
+<div class="container">
+
+  <h2 class="title" style="margin-left: 5px;">Lista Utenti</h2>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Cognome</th>
+      <th scope="col">Email</th>
+      <th scope="col">Ruolo</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of userList; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{user.nome}}</td>
+      <td>{{ user.cognome}}</td>
+      <td>{{ user.email }}</td>
+      <td>{{user.ruolo}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</div>

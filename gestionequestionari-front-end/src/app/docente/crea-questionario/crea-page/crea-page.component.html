@@ -1,0 +1,90 @@
+<form #domande="ngForm" (submit)="processForm(domande)">
+<div class="content mat-elevation-z8"  style="background-color: white;">
+  <div class="container">
+      <div class="form-group">
+        <h2 class="title">Crea Questionario</h2>
+
+        <div class="form-group">
+         <input type="text"
+            ngModel
+            name="titolo"
+            id="titolo"
+            #titolo="ngModel"
+            class="form-control"
+          placeholder="Nome Modulo"
+          required
+          autofocus="titolo"
+          style="height: 50px;font-size: 25px;">
+          <span class="help-block" style="color: red;" *ngIf="titolo.touched && !titolo.valid" >Inserisci un titolo!</span>
+                </div>
+
+         <div class="form-group">
+         <input type="text"
+            ngModel
+            name="descrizione"
+            id="descrizione"
+            #descrizione="ngModel"
+            class="form-control"
+          placeholder="descrizione"
+          style="font-size: 20px"
+          required>
+          <span class="help-block" style="color: red;" *ngIf="descrizione.touched && !descrizione.valid">Inserisci una descrizione!</span>
+                </div>
+      </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <ng-template ngFor let-domanda [ngForOf]="form.domande" let-index="index" let-isLast="last">
+
+    <div class="content mat-elevation-z8 animate__animated animate__fadeIn"  style="background-color: white;">
+
+      <div class="container">
+
+  <h2 class="title">Domanda
+    <a (click)="addDomanda()" style="font-size:5px;"><button  style="background-color: green;font-size:5px; border: none; border-radius: 40px; color: white; ">
+      <mat-icon style="font-size: 22px;">add</mat-icon>
+    </button></a>
+    <a (click)="removeDomanda(index)" style="font-size:5px;margin-left: 5px;" ><button *ngIf="index!=0" style="background-color: red;font-size:5px;border: none; border-radius: 40px; color: white;">
+      <mat-icon style="font-size: 22px;">close</mat-icon>
+    </button></a>
+  </h2>
+
+  <div class="form-group">
+    <input type="text"
+       name="domanda_{{domanda.id}}"
+       [(ngModel)]="domanda.domanda"
+       id="domanda"
+       class="form-control"
+       #domanda="ngModel"
+     placeholder="Inserisci la domanda"
+     style="height: 45px;font-size: 20px;"
+     required>
+           </div>
+           <mat-radio-group [(ngModel)]="domanda.rispostagiusta" name="rispostagiusta_{{domanda.id}}"
+           aria-labelledby="example-radio-group-label"
+           class="example-radio-group">
+           <mat-radio-button  name="giusta1"   value="1" ><input type="text" [(ngModel)]="domanda.risposta1" ngModel #risposta1="ngModel" class="form-control"  placeholder="risposta 1" id="risposta1" name="risposta1_{{domanda.id}}" required></mat-radio-button>
+           <mat-radio-button  name="giusta2"   value="2"><input type="text" [(ngModel)]="domanda.risposta2" ngModel #risposta2="ngModel" class="form-control"  placeholder="risposta 2" id="risposta2" name="risposta2_{{domanda.id}}" required></mat-radio-button>
+           <mat-radio-button  name="giusta3"   value="3"><input type="text" [(ngModel)]="domanda.risposta3" ngModel #risposta3="ngModel" class="form-control"  placeholder="risposta 3" id="risposta3" name="risposta3_{{domanda.id}}" required></mat-radio-button>
+           <mat-radio-button  name="giusta4"   value="4"><input type="text" [(ngModel)]="domanda.risposta4" ngModel #risposta4="ngModel" class="form-control"  placeholder="risposta 4" id="risposta4" name="risposta4_{{domanda.id}}" required></mat-radio-button>
+         </mat-radio-group>
+
+
+         <div style="font-size: 18px;margin-bottom: 10px; text-align: right;">
+         <span>Punteggio</span>
+         <input type="number" [(ngModel)]="domanda.punteggio"class="punteggio" id="punteggio" ngModel name="punteggio_{{domanda.id}}" #punteggio="ngModel" [min]="1" [max]="10"  value="0" style="border: none; text-align: right;" placeholder="/10" required>
+
+      </div>
+      <div style="text-align:end" *ngIf="i==index+1">
+        <a (click)="richieste(domande)"> <button  mat-mini-fab type="submit" class="" style="margin-right:3px; font-size: 10px; border: none;border-radius: 30px; margin-bottom: 10px; background-color: green;"[disabled]="!domande.valid"><mat-icon>done</mat-icon></button></a>
+    </div>
+
+    </div>
+
+
+  </div>
+    </ng-template>
+    </div>
+</form>
+

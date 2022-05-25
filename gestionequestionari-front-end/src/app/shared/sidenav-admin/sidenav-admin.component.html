@@ -1,0 +1,60 @@
+
+
+  <mat-sidenav-container>
+    <mat-sidenav mode="side" opened>
+      <div class="sidenav-nav-item">
+        <mat-toolbar>
+          <div style="height: 50px;text-align: center;">
+            <p style="text-align: center; margin-top: 13px;">GestioneQuestionari</p>
+          </div>
+          </mat-toolbar>
+          <div style="text-align: center; font-size: 30px; margin-top: 10px;">
+            Admin
+          </div>
+        <div class="item">
+        <button mat-button class="menu-button" routerLink="/amministratore/questionari" routerLinkActive="active" >
+          <mat-icon>assignment</mat-icon>
+          <span style="margin-left: 20px;">Questionari</span>
+      </button>
+    </div>
+
+    <div class="item">
+    <button mat-button class="menu-button" routerLink="/amministratore/newUser" routerLinkActive="active">
+      <mat-icon >add</mat-icon>
+      <span style="margin-left: 20px;">Crea Utente</span>
+    </button>
+    </div>
+
+    <div class="item">
+      <button mat-button class="menu-button" routerLink="/amministratore/lista" routerLinkActive="active">
+        <mat-icon >person</mat-icon>
+        <span style="margin-left: 20px;">Lista</span>
+      </button>
+    </div>
+
+    <button (click)="logout()" mat-button class="menu-button" routerLinkActive="active">
+      <mat-icon>exit_to_app</mat-icon>
+      <span style="margin-left: 20px;">LogOut</span>
+    </button>
+
+      </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content style="background-color: #d6d6d6;" >
+
+
+        <div *ngIf="isQuest()">
+          <app-questionari></app-questionari>
+        </div>
+
+        <div *ngIf="isCrea()">
+          <app-crea></app-crea>
+        </div>
+
+
+        <div *ngIf="isLista()">
+          <app-list-page></app-list-page>
+        </div>
+
+    </mat-sidenav-content>
+</mat-sidenav-container>
