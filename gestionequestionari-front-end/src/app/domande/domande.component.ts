@@ -142,6 +142,10 @@ export class DomandeComponent implements OnInit {
     this.getAllDomandeIdQuest()
     this.getAllQuestionario()
     this.startTimer()
+    // @ts-ignore
+    document.getElementById("submitAnswers").style.visibility="visible";
+    // @ts-ignore
+    document.getElementById("startExam").style.visibility="hidden";
   }
   onItemChange(value: any) {
     console.log(" Value is : ", value);
