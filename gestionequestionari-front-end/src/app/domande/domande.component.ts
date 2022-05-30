@@ -40,8 +40,8 @@ export class DomandeComponent implements OnInit {
 
 
 
-    this.getAllDomandeIdQuest()
-    this.getAllQuestionario()
+    // this.getAllDomandeIdQuest()
+    // this.getAllQuestionario()
 
 
 
@@ -139,6 +139,8 @@ export class DomandeComponent implements OnInit {
     this.beforeTest = false;
     this.afterState = true;
     this.text = "Prova Iniziata!"
+    this.getAllDomandeIdQuest()
+    this.getAllQuestionario()
     this.startTimer()
   }
   onItemChange(value: any) {
