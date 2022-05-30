@@ -33,14 +33,6 @@ public class UtenteControllerTest {
 		mockMvc.perform(get("/utenti")).andDo(print()).andExpect(status().isOk());
 	}
 
-	
-	@Test
-	public void postUtenti() throws Exception {
-		mockMvc.perform(post("/utenti").content("{\"nome\": \"prova\", \"cognome\":\"rossi\", \"ruolo\":\"docente\", \"password\":\"1234\", \"email\":\"prova@\"}")
-				.contentType(MediaType.APPLICATION_JSON))
-				.andExpect(status().isCreated()).andReturn();
-	}
-	
 
 	
 }

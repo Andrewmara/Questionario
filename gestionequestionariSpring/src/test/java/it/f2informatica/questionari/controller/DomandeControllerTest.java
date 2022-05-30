@@ -31,11 +31,4 @@ public class DomandeControllerTest {
 	}
 
 	
-	@Test
-	public void postDomanda() throws Exception {
-		mockMvc.perform(post("/domande").content("{\"domanda\": \"domanda test\", \"questionario\":\"1\", \"risposta\":\"risposta test\"}")
-				.contentType(MediaType.APPLICATION_JSON))
-				.andExpect(status().isCreated()).andReturn();
-	}
-	
 }

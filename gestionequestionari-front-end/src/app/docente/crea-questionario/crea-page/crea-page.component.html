@@ -77,7 +77,7 @@
 
       </div>
       <div style="text-align:end" *ngIf="i==index+1">
-        <a (click)="richieste(domande)"> <button  mat-mini-fab type="submit" class="" style="margin-right:3px; font-size: 10px; border: none;border-radius: 30px; margin-bottom: 10px; background-color: green;"[disabled]="!domande.valid"><mat-icon>done</mat-icon></button></a>
+        <a disabled="!domande.valid" (click)="richieste(domande)" >  <button  mat-mini-fab type="submit" class="" style="margin-right:3px; font-size: 10px; border: none;border-radius: 30px; margin-bottom: 10px; background-color: green;"[disabled]="!domande.valid && !titolo.valid && !descrizione.valid"><mat-icon>done</mat-icon></button></a>
     </div>
 
     </div>

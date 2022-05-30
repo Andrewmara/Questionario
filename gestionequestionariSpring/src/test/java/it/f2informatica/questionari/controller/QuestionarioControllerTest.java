@@ -31,12 +31,4 @@ public class QuestionarioControllerTest {
 	}
 
 	
-	@Test
-	public void postQuest() throws Exception {
-
-		mockMvc.perform(post("/questionari").content("{\"titolo\": \"prova test\", \"descrizione\":\"test\", \"docente\":\"2\"}")
-				.contentType(MediaType.APPLICATION_JSON))
-				.andExpect(status().isCreated()).andReturn();
-	}
-	
 }

@@ -32,13 +32,6 @@ public class QuestionarioUtenteControllerTest {
 	}
 
 	
-	@Test
-	public void postQuestUtent() throws Exception {
-	mockMvc.perform(post("/questionarioutente").content("{\"questionario\": \"3\", \"utente\":\"3\", \"punteggio\":\"20\"}")
-				.contentType(MediaType.APPLICATION_JSON))
-				.andExpect(status().isCreated()).andReturn();
-	}
-	
 	
 
 	

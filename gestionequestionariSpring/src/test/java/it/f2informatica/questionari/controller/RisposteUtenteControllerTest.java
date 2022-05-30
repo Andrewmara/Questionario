@@ -32,16 +32,7 @@ public class RisposteUtenteControllerTest {
 		mockMvc.perform(get("/risposteUtente")).andDo(print()).andExpect(status().isOk());
 	}
 
-	
-	@Test
-	public void postRisposta() throws Exception {
-		
 
-		mockMvc.perform(post("/risposteUtente").content("{\"domanda\": \"3\", \"risposta\":\"test\", \"id_utente\":\"3\"}")
-				.contentType(MediaType.APPLICATION_JSON))
-				.andExpect(status().isCreated()).andReturn();
-	}
-	
 	
 
 	
