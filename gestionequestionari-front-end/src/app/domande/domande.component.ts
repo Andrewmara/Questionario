@@ -69,7 +69,8 @@ export class DomandeComponent implements OnInit {
         console.log("fe")
       }
       );
-    })
+    }
+    )
 
     this.questionarioservice.allDomande().forEach((domande) => {
       for (let i = 0; i < domande.length; i++) {
@@ -126,12 +127,8 @@ export class DomandeComponent implements OnInit {
         clearInterval(this.interval);
         this.checkScore();
         this.domande.splice(0);
-        const startExam = document.getElementById("startExam")
-        const submitButton = document.getElementById("submitAnswers");
         // @ts-ignore
-        startExam.remove()
-        // @ts-ignore
-        submitButton.remove();
+        document.getElementById("submitAnswers").style.visibility="hidden";
       }
     }, 1000)
   }
