@@ -114,11 +114,24 @@ export class DomandeComponent implements OnInit {
     });
   }
   startTimer() {
+    let startDate = new Date();
+    let second = startDate.getSeconds() + 60;
+    let endDate = new Date()
+    endDate.setSeconds(second);
+    this.timeLeft = Math.floor((endDate.getTime() - startDate.getTime()) / 1000);
     this.interval = setInterval(() => {
       if (this.timeLeft > 0) {
-        this.timeLeft--;
+        this.timeLeft = Math.ceil((endDate.getTime() - new Date().getTime()) / 1000);
       } else {
-        this.timeLeft = 600;
+        clearInterval(this.interval);
+        this.checkScore();
+        this.domande.splice(0);
+        const startExam = document.getElementById("startExam")
+        const submitButton = document.getElementById("submitAnswers");
+        // @ts-ignore
+        startExam.remove()
+        // @ts-ignore
+        submitButton.remove();
       }
     }, 1000)
   }

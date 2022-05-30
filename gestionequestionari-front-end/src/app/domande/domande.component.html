@@ -16,7 +16,7 @@
     </div>
 
     <br><br>
-    <button (click)="startQuest()" type="button" class="btn btn-primary" [disabled]="afterState"> Inizia
+    <button (click)="startQuest()" type="button" class="btn btn-primary" [disabled]="afterState" id="startExam"> Inizia
         Questionario</button>
     <div class="text-left">
         <div id="results" class="text-primary display-1"></div>
@@ -48,7 +48,7 @@
                 <hr>
                 <br><br>
             </div>
-            <button (click)="checkScore()" class="btn btn-primary" [disabled]="beforeTest"> Submit Answers</button>
+            <button (click)="checkScore()" class="btn btn-primary" [disabled]="beforeTest" id="submitAnswers"> Submit Answers</button>
         </form>
 
         <br><br><br>
