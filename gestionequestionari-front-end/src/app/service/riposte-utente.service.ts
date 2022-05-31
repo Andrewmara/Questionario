@@ -8,7 +8,7 @@ import { Risposta } from '../model/Risposta';
   providedIn: 'root'
 })
 export class RiposteUtenteService {
-  url = "http://localhost:8080";
+  url = "http://localhost:8091";
   constructor(private httpClient: HttpClient) { }
 
   addRisposteUtente(rispostaUtente: Risposta): Observable<Object>{

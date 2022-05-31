@@ -10,7 +10,7 @@ import {error} from "@angular/compiler/src/util";
 })
 export class AuthenticationService {
 
-  // BASE_PATH: 'http://localhost:8080'
+  // BASE_PATH: 'http://localhost:8091'
   USER_NAME_SESSION_ATTRIBUTE_NAME = 'authenticatedUser'
 
   public username: string = '';
@@ -22,7 +22,7 @@ export class AuthenticationService {
   }
 
   authenticationService(username: string, password: string) {
-    return this.http.get(`http://localhost:8080/api/basicauth?noauthchallenge`,
+    return this.http.get(`http://localhost:8091/api/basicauth?noauthchallenge`,
       { headers: { authorization: this.createBasicAuthToken(username, password),  } }).pipe(map((res) => {
       this.username = username;
       this.password = password;
@@ -59,6 +59,6 @@ export class AuthenticationService {
 
   getUserRole(email: string): Observable<string> {
     // @ts-ignore
-    return this.http.get<string>("http://localhost:8080/api/basicauth/" + email, {responseType: 'text'})
+    return this.http.get<string>("http://localhost:8091/api/basicauth/" + email, {responseType: 'text'})
   }
 }
