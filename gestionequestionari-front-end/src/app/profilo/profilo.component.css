@@ -8,6 +8,8 @@
   align-content: center;
   margin-top: 50px;
   column-gap: 30px;
+  animation: fadeInLeft;
+  animation-duration: 1s;
 }
 .app {
   padding: 2rem;
@@ -16,11 +18,15 @@
   width: 300px;
   height: auto;
   padding: 50px;
+  animation: fadeIn;
+  animation-duration: 1s;
 }
 .table{
   width: 700px;
   height: auto;
   padding: 10px;
+  animation: fadeIn;
+  animation-duration: 1s;
 
 }
 .center {
@@ -31,5 +37,8 @@ th{
   text-align: center;
 }
 
+mat-icon{
+  cursor: pointer;
+}
 
 

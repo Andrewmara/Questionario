@@ -14,7 +14,7 @@ import { RiposteUtenteService } from '../service/riposte-utente.service';
   styleUrls: ['./domande.component.css']
 })
 export class DomandeComponent implements OnInit {
-  id!: number
+  id = this.activatedRoute.snapshot.params['id'];
   domande!: Domande[];
   risposte: Array<Risposta> = []
   questUtente!: QuestionarioUtente
@@ -31,19 +31,31 @@ export class DomandeComponent implements OnInit {
   text!: string
   color = "green";
   punteggioTot = 0;
+  pScore=0;
+  ndomande!: number
   constructor(private questionarioservice: QuestionarioService, private utenteService: UtenteService, public quest: QuestionarioService, public activatedRoute: ActivatedRoute, private ruservice: RiposteUtenteService, private router: Router) { }
 
   ngOnInit(): void {
     console.log(this.currentUser.id_utente)
     console.log(this.currentUser.email)
     console.log(this.currentUser.nome)
+    console.log(this.id)
+    this.questionarioservice.getNumdomande(this.id).subscribe(data=>{
+      this.ndomande=data
+    })
 
+    this.questionarioservice.getPuntTot(this.id).subscribe(ptot=>{
+      this.pScore=ptot
+    })
 
-
-    // this.getAllDomandeIdQuest()
-    // this.getAllQuestionario()
-
-
+    this.questionarioservice.allQuestionari().subscribe(data => {
+      console.log(data)
+      for (let i = 0; i < data.length; i++) {
+        if (data[i].id_questionario == this.id) {
+          this.questName = data[i].titolo
+        }
+      }
+    })
 
   }
   getAllDomandeIdQuest() {
@@ -137,7 +149,7 @@ export class DomandeComponent implements OnInit {
     this.afterState = true;
     this.text = "Prova Iniziata!"
     this.getAllDomandeIdQuest()
-    this.getAllQuestionario()
+
     this.startTimer()
     // @ts-ignore
     document.getElementById("submitAnswers").style.visibility="visible";
@@ -146,5 +158,8 @@ export class DomandeComponent implements OnInit {
   }
   onItemChange(value: any) {
     console.log(" Value is : ", value);
+  }
+  back(){
+    return  this.router.navigate(['/candidato']);
   }
 }

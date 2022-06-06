@@ -15,6 +15,8 @@ public interface domandaInterface {
 	List<Domande> findAllDomaByQuestId(int id);
 	
 	Integer nDomande(int questionario);
+
+	Integer Ptot(int questionario);
 	
 	
 }

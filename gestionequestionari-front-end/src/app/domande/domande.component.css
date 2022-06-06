@@ -1,40 +1,77 @@
 .head{
-    background-color: #9AD0EC;
+    background-color: #d6d6d6;;
     padding: 20px;
     margin-top: 10px;
     border-radius: 25px;
+    animation: fadeIn;
+    animation-duration: 1s;
 }
 .score{
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
+    animation: fadeIn;
+    animation-duration: 1s;
 }
 .score > p{
     font-size: 20px;
     color: black;
+    animation: fadeIn;
+    animation-duration: 1s;
 }
 
 .title > h1{
     text-align:center;
     font-family: 'Catamaran', sans-serif;
+    animation: fadeInLeft;
+    animation-duration: 0.5s;
 }
 .title > p{
     text-align:center;
     font-family: 'Catamaran', sans-serif;
+    animation: fadeInLeft;
+    animation-duration: 0.5s;
 }
 label{
     font-family: 'Catamaran', sans-serif;
+    animation: fadeInLeft;
+    animation-duration: 0.5s;
 }
 
 
 h3{
     font-family: 'Catamaran', sans-serif;
+    margin-top: 20px;
+    animation: fadeInLeft;
+    animation-duration: 0.5s;
 }
 button{
     font-family: 'Catamaran', sans-serif;
-
+    animation: fadeInLeft;
+    animation-duration: 0.5s;
 }
 
 #submitAnswers {
   visibility: hidden;
+}
+
+.content {
+  height: auto;
+  border-radius: 10px;
+  margin: 16px;
+  margin-left: 32px;
+  width: auto;
+  animation: fadeIn;
+  animation-duration: 1s;
+
+}
+
+.domande{
+  margin-left: 15px;
+  border-radius: 10px;
+  height: auto;
+  width: 100%;
+  animation: fadeIn;
+  animation-duration: 1s;
+
 }

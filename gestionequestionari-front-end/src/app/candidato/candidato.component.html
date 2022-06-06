@@ -8,7 +8,7 @@
             <p style="text-align: center; margin-top: 13px;">GestioneQuestionari</p>
           </div>
           </mat-toolbar>
-          <div style="text-align: center; font-size: 30px; margin-top: 10px;">
+          <div style="text-align: center; font-size: 25px; margin-top: 10px;">
             {{currentUser.nome}} {{currentUser.cognome}}
           </div>
 
@@ -16,13 +16,14 @@
     <div class="item">
     <button (click)="goToProfilo()" mat-button class="menu-button" routerLinkActive="active">
 
-      <span style="margin-left: 5px;"><mat-icon>account_circle</mat-icon>  Profilo</span>
+      <mat-icon style="margin-left:-5px">account_circle</mat-icon>
+      <span style="margin-left: 5px; font-size: 18px;" >Profilo</span>
     </button>
     </div>
     <div class="item">
         <button (click)="logout()" mat-button class="menu-button" routerLinkActive="active">
-
-          <span style="margin-left: 5px;"><mat-icon>exit_to_app</mat-icon>  Log out</span>
+          <mat-icon style="margin-left:-5px">exit_to_app</mat-icon>
+      <span style="margin-left: 5px; font-size: 18px;" >Logout</span>
         </button>
         </div>
 
@@ -31,7 +32,6 @@
 
     <mat-sidenav-content style="background-color: #d6d6d6;" >
       <div class="content mat-elevation-z8" style="background-color: white; height: auto;">
-
         <div class="container">
             <div class="row">
                 <div *ngFor="let q of quest" >

@@ -110,6 +110,14 @@ public class JDBCRepository implements utenteInterface,questionarioInterface,dom
 				+ "WHERE d.questionario = ?", Integer.class,questionario);
 	}
 	
+	@Override
+	public Integer Ptot(int questionario) {
+		return jdbcTemplate.queryForObject("SELECT SUM(d.punteggio)\r\n"
+				+ "FROM domande d\r\n"
+				+ "WHERE d.questionario = ?", Integer.class,questionario);
+	}
+	
+	
 //------------QuestionarioUtente-----------------
 	@Override
 	public int saveQU(QuestionarioUtente qu) {

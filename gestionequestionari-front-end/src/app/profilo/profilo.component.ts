@@ -12,8 +12,10 @@ export class ProfiloComponent implements OnInit {
   results: any
   allquest: any
   alltitolodes: any
+  pTot!:any
+  num:Array<number> = [];
   currentUser = JSON.parse(localStorage.getItem('loggedUser') || '{}');
-  constructor(private router: Router, public service: QuestionarioService,private utenteService:UtenteService) { 
+  constructor(private router: Router, public service: QuestionarioService,private utenteService:UtenteService) {
    }
 
 
@@ -27,6 +29,10 @@ export class ProfiloComponent implements OnInit {
             if(data[i].questionario == titolodes[j].id_questionario){
               data[i].titolo = titolodes[j].titolo
               data[i].descrizione = titolodes[j].descrizione
+              this.service.getPuntTot(titolodes[j].id_questionario).subscribe(punt=>{
+                this.num[j]=punt
+                console.log(this.num)
+              })
             }
           }
         })
@@ -35,7 +41,7 @@ export class ProfiloComponent implements OnInit {
       this.results = data
     })
 
-    //AllQUestionari 
+    //AllQUestionari
     this.service.allQuestionari().subscribe(quest => {
       console.log(quest)
       this.allquest = quest
@@ -49,5 +55,9 @@ export class ProfiloComponent implements OnInit {
   goToProfilo() {
     localStorage.clear();
     this.router.navigate(['profilo']);
+  }
+
+  back(){
+    return  this.router.navigate(['/candidato']);
   }
 }

@@ -29,6 +29,8 @@ mat-toolbar {
     margin-left: 32px;
     display: flex;
     font-size: 2rem;
+    animation: fadeIn;
+    animation-duration: 1s;
 
   }
 
@@ -53,6 +55,13 @@ mat-toolbar {
     box-shadow: #4F4F51;
     margin-left: 10px;
     background-color: transparent;
+    text-align: left;
+
+  }
+
+  button:hover{
+    animation: pulse;
+    animation-duration: 3s;
   }
 
   mat-icon{
@@ -60,17 +69,14 @@ mat-toolbar {
   }
 
 
-
-
-
-  body{
-    background: rgb(255,255,255);
-}
 .card{
     box-shadow: 0 0 15px rgba(0,0,0,0.07);
     margin: 1rem 0;
     border-radius: 1rem;
+    animation: fadeInLeft;
+    animation-duration: 0.5s;
 }
+
 .page-header{
     display: flex;
     align-items: center;
@@ -81,6 +87,7 @@ mat-toolbar {
 }
 a.developer6669{
     text-decoration: none;
+
 }
 .developer6669:hover{
     opacity: 0.7;

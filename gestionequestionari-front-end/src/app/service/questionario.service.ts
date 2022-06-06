@@ -32,4 +32,7 @@ export class QuestionarioService {
   getNumdomande(id: number): Observable<number>{
     return this.httpClient.get<number>(`${this.url}/domande/numero/${id}`);
   }
+  getPuntTot(id: number): Observable<number>{
+    return this.httpClient.get<number>(`${this.url}/domande/ptot/${id}`);
+  }
 }

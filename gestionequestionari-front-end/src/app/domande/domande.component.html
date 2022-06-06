@@ -1,27 +1,32 @@
-<div class="container">
+
+<div class="content mat-elevation-z8"  style="background-color: white;">
+  <div class="container">
     <div class="head">
         <div class="card-block">
             <div class="title">
-                <h1 class="card-title display-3" style="font-size: 60px;">{{questName | uppercase }}</h1>
+                <h1 class="card-title display-3" style="font-size: 60px;text-align: center;">{{questName | uppercase }}</h1>
 
                 <p [style.color]="color" style="font-size: 40px;">{{text}}</p>
             </div>
         </div>
         <div class="score">
-            <p>Score: {{punteggioTot}}</p>
-            <p class="card-title display-4"><mat-icon>alarm</mat-icon> Tempo: {{timeLeft}} s</p>
-            <p>Question: 0/10</p>
+            <p> Total Score: {{pScore}}</p>
+            <p class="card-title display-4" style="text-align:center; margin-left: 15px;"><mat-icon>alarm</mat-icon> Tempo: {{timeLeft}} s</p>
+            <p>Question: {{ndomande}}/40</p>
         </div>
 
     </div>
 
     <br><br>
-    <button (click)="startQuest()" type="button" class="btn btn-primary" [disabled]="afterState" id="startExam"> Inizia
+    <button  (click)="startQuest()" type="button" class="btn btn-primary" [disabled]="afterState" id="startExam"> <mat-icon style="font-size: 20px; margin-right: 5px;">play_arrow</mat-icon>Inizia
         Questionario</button>
+    <br>
+    <button *ngIf="beforeTest" class="btn btn-danger" (click)="back()" style="margin-top: 10px;margin: none;"><mat-icon style="font-size: 20px; margin-right: 5px;">keyboard_backspace</mat-icon><span>Torna indietro</span></button>
     <div class="text-left">
         <div id="results" class="text-primary display-1"></div>
         <form>
             <div *ngFor="let d of domande; let indexOfelement=index;">
+
                 <h3 class="body-font"> {{indexOfelement}}. {{d.domanda}}</h3>
                 <label class="cursor">
                     <input type="radio" name="{{d.id_domanda}}" value="{{d.ris_giusta}}" id="q1a" class="display-5 mx-1"
@@ -48,10 +53,12 @@
                 <hr>
                 <br><br>
             </div>
-            <button (click)="checkScore()" class="btn btn-primary" [disabled]="beforeTest" id="submitAnswers"> Submit Answers</button>
+            <button (click)="checkScore()" class="btn btn-primary" [disabled]="beforeTest" id="submitAnswers"><mat-icon style="font-size: 20px">done</mat-icon> Submit Answers</button>
         </form>
 
         <br><br><br>
 
 
     </div>
+  </div>
+</div>

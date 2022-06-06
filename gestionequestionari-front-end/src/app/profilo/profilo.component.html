@@ -5,7 +5,7 @@
       <h1 class="heading">{{currentUser.nome}} {{currentUser.cognome}}</h1>
     </div>
     <h4 class="heading">Email: {{currentUser.email}}</h4>
-
+    <mat-icon (click)="back()">keyboard_backspace</mat-icon>
     <p></p>
     <br>
   </div>
@@ -26,12 +26,14 @@
           <td>{{indexOfelement}}</td>
           <td>{{q.titolo}}</td>
           <td>{{q.descrizione}}</td>
-          <td>{{q.punteggio}}</td>
+          <td *ngIf="q.punteggio>num[indexOfelement]/2" style="color: green;"><b>{{q.punteggio}} / {{num[indexOfelement]}}</b></td>
+          <td *ngIf="q.punteggio<num[indexOfelement]/2" style="color: red;"><b>{{q.punteggio}} / {{num[indexOfelement]}}</b></td>
+          <td *ngIf="q.punteggio==num[indexOfelement]/2" style="color: rgb(242, 220, 22);"><b>{{q.punteggio}} / {{num[indexOfelement]}}</b></td>
         </tr>
 
       </tbody>
     </table>
-    
+
   </div>
 
 

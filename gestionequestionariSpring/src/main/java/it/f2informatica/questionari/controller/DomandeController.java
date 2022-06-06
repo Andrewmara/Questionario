@@ -51,4 +51,8 @@ public class DomandeController {
 		return this.domandaRepository.nDomande(questionario);
 	}
 
+	@RequestMapping(value="/domande/ptot/{questionario}", method=RequestMethod.GET)
+	public Integer getPuntTot(@PathVariable int questionario) {
+		return this.domandaRepository.Ptot(questionario);
+	}
 }
