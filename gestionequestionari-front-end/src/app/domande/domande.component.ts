@@ -33,6 +33,7 @@ export class DomandeComponent implements OnInit {
   punteggioTot = 0;
   pScore=0;
   ndomande!: number
+  success=false
   constructor(private questionarioservice: QuestionarioService, private utenteService: UtenteService, public quest: QuestionarioService, public activatedRoute: ActivatedRoute, private ruservice: RiposteUtenteService, private router: Router) { }
 
   ngOnInit(): void {
@@ -83,7 +84,6 @@ export class DomandeComponent implements OnInit {
       );
     }
     )
-
     this.questionarioservice.allDomande().forEach((domande) => {
       for (let i = 0; i < domande.length; i++) {
         for (let j = 0; j < this.risposte.length; j++) {
@@ -107,7 +107,10 @@ export class DomandeComponent implements OnInit {
     // this.router.navigate(['/candidato']);
     this.text = "Prova Terminata!"
     this.color = "red"
+    this.success=true
+    document.getElementById("submitAnswers")!.style.visibility="hidden";
   }
+
   radioChangeHandler(event: any) {
 
     this.selectedRisposta = event.target.value//Risposta
@@ -137,12 +140,14 @@ export class DomandeComponent implements OnInit {
         this.timeLeft = Math.ceil((endDate.getTime() - new Date().getTime()) / 1000);
       } else {
         clearInterval(this.interval);
+
         this.checkScore();
         this.domande.splice(0);
         // @ts-ignore
-        document.getElementById("submitAnswers").style.visibility="hidden";
+
       }
     }, 1000)
+
   }
   startQuest() {
     this.beforeTest = false;
@@ -153,6 +158,9 @@ export class DomandeComponent implements OnInit {
     this.startTimer()
     // @ts-ignore
     document.getElementById("submitAnswers").style.visibility="visible";
+
+
+
     // @ts-ignore
     document.getElementById("startExam").style.visibility="hidden";
   }

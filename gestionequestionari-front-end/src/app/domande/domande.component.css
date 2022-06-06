@@ -75,3 +75,15 @@ button{
   animation-duration: 1s;
 
 }
+.success{
+  font-size: 2rem;
+  margin-bottom: 10px;
+
+  font-weight: bold;
+  color: green;
+  padding-bottom: 15px;
+  padding-top: 13px;
+}
+.back{
+  cursor: pointer;
+}

@@ -11,7 +11,7 @@
         </div>
         <div class="score">
             <p> Total Score: {{pScore}}</p>
-            <p class="card-title display-4" style="text-align:center; margin-left: 15px;"><mat-icon>alarm</mat-icon> Tempo: {{timeLeft}} s</p>
+            <p class="card-title display-4" style="text-align:center; margin-left: 20px;"><mat-icon>alarm</mat-icon> Tempo: {{timeLeft}} s</p>
             <p>Question: {{ndomande}}/40</p>
         </div>
 
@@ -53,11 +53,14 @@
                 <hr>
                 <br><br>
             </div>
+
+          <div class="success" *ngIf="success==true"><mat-icon>done</mat-icon> Risposte salvate!</div>
+          <mat-icon *ngIf="success==true" class="back" (click)="back()">keyboard_backspace</mat-icon>
             <button (click)="checkScore()" class="btn btn-primary" [disabled]="beforeTest" id="submitAnswers"><mat-icon style="font-size: 20px">done</mat-icon> Submit Answers</button>
+
         </form>
 
         <br><br><br>
-
 
     </div>
   </div>

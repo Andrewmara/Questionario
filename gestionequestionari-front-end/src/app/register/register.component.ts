@@ -10,6 +10,7 @@ import { UtenteService } from '../service/utente.service';
 })
 export class RegisterComponent implements OnInit {
   utente: Utente = new Utente();
+  success=false
 
   constructor(private userService:UtenteService, private router: Router ) {
     this.utente.ruolo = "candidato"
@@ -21,8 +22,11 @@ export class RegisterComponent implements OnInit {
     this.userService.registration(this.utente).subscribe( data => {
       console.log(data);
       this.router.navigate(['/login']);
+
     },
     error => console.log(error));
+    this.router.navigate(['/login']);
+    this.success=true
   }
   onSubmit(){
     console.log(this.utente);

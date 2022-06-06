@@ -34,8 +34,8 @@
 
   <div class="content mat-elevation-z8" style="background-color: white;">
     <div class="container">
-  <div *ngFor="let quest of questList; index as i">
-    <table *ngIf="dropdown[i]" class="table" style="font-size:13px;">
+  <div *ngFor="let quest of questList; index as in">
+    <table *ngIf="dropdown[in]" class="table" style="font-size:13px;">
       <thead>
         <tr style="margin-top: 10px;">
           <th scope="col">#</th>
@@ -49,7 +49,7 @@
           <th scope="row">{{i + 1}}</th>
           <td>{{user[i].nome}} </td>
           <td>{{user[i].cognome}}</td>
-          <td>{{punteggi[i]}}%</td>
+          <td>{{punteggi[i]}} / {{pTot[in]}}</td>
         </tr>
         </tbody>
       </table>

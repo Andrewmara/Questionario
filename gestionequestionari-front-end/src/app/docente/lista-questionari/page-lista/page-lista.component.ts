@@ -1,6 +1,7 @@
 
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { user } from 'app/admin/admin.service';
+import { QuestionarioService } from 'app/service/questionario.service';
 
 import { DocenteService } from '../../docente.service';
 
@@ -22,8 +23,9 @@ export class PageListaComponent implements OnInit{
   utenti:Array<user>= [];
   cand:Array<number>=[]
   punteggi:Array<any>=[]
+  pTot:Array<number>=[]
 
-  constructor(public docente:DocenteService) { }
+  constructor(public docente:DocenteService,public questserv:QuestionarioService) { }
 
   ngOnInit(){
 
@@ -33,6 +35,7 @@ export class PageListaComponent implements OnInit{
   console.log(this.questList)
   for(let i=0;i<this.size;i++){
     this.dropdown[i]=false
+
     this.docente.getCountCandidati(this.questList[i].id_questionario).subscribe(data=>{
     this.nCand[i]=data
     this.docente.getMediaPunteggi(this.questList[i].id_questionario).subscribe(data=>{
@@ -71,6 +74,10 @@ export class PageListaComponent implements OnInit{
           this.docente.punteggioUtente(idque,this.user[i].id_utente).subscribe(data=>{
             this.punteggi[i]=data
             console.log(this.user)
+            this.questserv.getPuntTot(this.questList[i].id_questionario).subscribe(data=>{
+              this.pTot[i]=data
+              console.log(this.pTot)
+              })
 
           })
         }
