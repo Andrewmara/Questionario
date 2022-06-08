@@ -34,7 +34,7 @@
       <div class="content mat-elevation-z8" style="background-color: white; height: auto;">
         <div class="container">
             <div class="row">
-                <div *ngFor="let q of quest" >
+                <div *ngFor="let q of quest;  let indexOfelement=index;" >
                     <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="section-status card">
                             <div class="img-container">
@@ -49,9 +49,16 @@
                                 </small>
                             </div>
                             <div class="footer">
-                                <a  class="alink" [routerLink]="['/candidato/questionari/',q.id_questionario]" class="btn btn-primary mey-btn mey-btn-md">
+                                <a  *ngIf="already[indexOfelement]==null" class="alink" [routerLink]="['/candidato/questionari/',q.id_questionario]" class="btn btn-primary mey-btn mey-btn-md">
                                     Fai prova
                                 </a>
+
+                                <a  *ngIf="already[indexOfelement]!=null" class="alink">
+                                  <mat-icon>done</mat-icon>
+                              </a>
+
+
+
                             </div>
                         </div>
                     </div>
@@ -64,5 +71,3 @@
       </div>
     </mat-sidenav-content>
 </mat-sidenav-container>
-
-

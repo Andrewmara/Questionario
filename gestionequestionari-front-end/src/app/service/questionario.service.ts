@@ -35,4 +35,10 @@ export class QuestionarioService {
   getPuntTot(id: number): Observable<number>{
     return this.httpClient.get<number>(`${this.url}/domande/ptot/${id}`);
   }
+  AlreadyDone(questionario:number, utente:number){
+    return this.httpClient.get<number>(`${this.url}/questionarioutente/alreadyDone/${questionario}/${utente}`)
+  }
+  deleteQuest(questionario:number, utente:number){
+    return this.httpClient.get<number>(`${this.url}/questionarioutente/delete/${questionario}/${utente}`)
+  }
 }

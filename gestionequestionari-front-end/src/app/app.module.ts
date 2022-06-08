@@ -33,7 +33,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatRadioModule} from '@angular/material/radio';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProfiloComponent } from './profilo/profilo.component';
-
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -57,7 +57,7 @@ import { ProfiloComponent } from './profilo/profilo.component';
     PageListaComponent,
     CreaPageComponent,
     ProfiloComponent
-    
+
 
 
   ],
@@ -77,6 +77,7 @@ import { ProfiloComponent } from './profilo/profilo.component';
     MatSelectModule,
     MatRadioModule,
     ReactiveFormsModule,
+    MatDialogModule,
 
   ],
   providers: [],

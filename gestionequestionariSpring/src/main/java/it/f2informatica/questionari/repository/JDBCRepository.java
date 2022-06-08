@@ -178,7 +178,18 @@ public class JDBCRepository implements utenteInterface,questionarioInterface,dom
 	}
 	
 	
-
+	@Override
+	public Integer QuestAlredyDone(int questionario, int utente) {
+		return jdbcTemplate.queryForObject("SELECT u.punteggio\r\n"
+				+ "FROM questionario_utente u\r\n"
+				+ "WHERE u.questionario = ? AND u.utente = ?",Integer.class,questionario, utente);
+	}
+	
+	@Override
+	public void deleteQuest(int questionario, int utente) {
+		 jdbcTemplate.update("DELETE FROM questionario_utente q\r\n"
+				+ "WHERE q.questionario = ? AND q.utente = ?",questionario, utente);
+	}
 	
 //------------RisposteUtente---------------------
 

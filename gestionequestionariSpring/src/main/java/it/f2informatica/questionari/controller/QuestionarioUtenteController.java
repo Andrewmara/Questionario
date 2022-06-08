@@ -72,4 +72,14 @@ public class QuestionarioUtenteController {
 		return this.quRepository.TitoloDescrizion(utente);
 	}
 	
+
+	@RequestMapping(value="/questionarioutente/alreadyDone/{questionario}/{utente}",method=RequestMethod.GET)
+	public Integer QuestAlreadyDone(@PathVariable int questionario,@PathVariable int utente){
+		return this.quRepository.QuestAlredyDone(questionario, utente);
+	}
+	
+	@RequestMapping(value="/questionarioutente/delete/{questionario}/{utente}", method=RequestMethod.DELETE)
+	public void deleteQuest(@PathVariable int questionario,@PathVariable int utente) {
+		this.quRepository.deleteQuest(questionario, utente);
+	 }
 }

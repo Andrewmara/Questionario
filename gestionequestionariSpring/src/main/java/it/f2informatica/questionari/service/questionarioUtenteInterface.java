@@ -27,5 +27,9 @@ public interface questionarioUtenteInterface {
 
 	List<Questionario> TitoloDescrizion(int utente);
 
+	Integer QuestAlredyDone(int questionario, int utente);
+
+	void deleteQuest(int questionario, int utente);
+
 
 }
