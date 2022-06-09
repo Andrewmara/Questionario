@@ -39,6 +39,8 @@ export class QuestionarioService {
     return this.httpClient.get<number>(`${this.url}/questionarioutente/alreadyDone/${questionario}/${utente}`)
   }
   deleteQuest(questionario:number, utente:number){
-    return this.httpClient.get<number>(`${this.url}/questionarioutente/delete/${questionario}/${utente}`)
+    return this.httpClient.delete<number>(`${this.url}/questionarioutente/delete/${questionario}/${utente}`)
   }
+
+
 }

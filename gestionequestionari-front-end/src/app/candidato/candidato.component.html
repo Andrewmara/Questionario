@@ -53,12 +53,9 @@
                                     Fai prova
                                 </a>
 
-                                <a  *ngIf="already[indexOfelement]!=null" class="alink">
+                                <a  *ngIf="already[indexOfelement]!=null" class="alink" (click)="openDialog(indexOfelement)">
                                   <mat-icon>done</mat-icon>
                               </a>
-
-
-
                             </div>
                         </div>
                     </div>

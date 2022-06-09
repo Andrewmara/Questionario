@@ -34,6 +34,8 @@ import {MatRadioModule} from '@angular/material/radio';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProfiloComponent } from './profilo/profilo.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { PopupComponent } from './shared/popup/popup.component';
+
 
 
 @NgModule({
@@ -56,8 +58,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     ListaQuestionariComponent,
     PageListaComponent,
     CreaPageComponent,
-    ProfiloComponent
-
+    ProfiloComponent,
+    PopupComponent,
 
 
   ],
