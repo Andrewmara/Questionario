@@ -6,7 +6,7 @@ import { Utente } from '../model/Utente';
   providedIn: 'root'
 })
 export class UtenteService {
-  url = "http://localhost:8091";
+  url = "http://localhost:8091/api";
   constructor(private httpClient: HttpClient) { }
   allUsers():Observable<Utente[]>{
     return this.httpClient.get<Utente[]>(`${this.url}` + '/utenti');

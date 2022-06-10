@@ -8,19 +8,23 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import it.f2informatica.questionari.domain.Utente;
 import it.f2informatica.questionari.service.utenteInterface;
 
-
-
-
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
+@RequestMapping("/api")
 public class UtenteController {
 	
 	
@@ -28,7 +32,11 @@ public class UtenteController {
 	@Qualifier("MYSQL")
 	utenteInterface utenteRepositery;
 	
-	@RequestMapping(value="/utenti", method=RequestMethod.POST)
+	@ApiResponses(value = { @ApiResponse(code = 200, message = "Successo|OK"),
+			@ApiResponse(code = 500, message = "internal server error"),
+			@ApiResponse(code = 404, message = "NOT found") })
+	
+	@PostMapping(path="/utenti")
 	public ResponseEntity<String> addUtente(@RequestBody Utente newUtente) {
 		PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 		String password = newUtente.getPassword();
@@ -44,12 +52,12 @@ public class UtenteController {
 	
 	}
 	
-	@RequestMapping(value="/utenti",method=RequestMethod.GET)
+	@GetMapping(path="/utenti")
 	public List<Utente> getUtente(){
 		return this.utenteRepositery.findAll();
 	}
 	
-	@RequestMapping(value="/utenti/{id_utente}", method=RequestMethod.GET)
+	@GetMapping(path="/utenti/{id_utente}")
 	public ResponseEntity<Utente> getUtenteByid(@PathVariable int id_utente) {
 		Utente u =this.utenteRepositery.findById(id_utente);
 		if(u!=null) {
@@ -60,7 +68,7 @@ public class UtenteController {
 		}
 	}
 	
-	@RequestMapping(value="/utenti/email/{email}", method=RequestMethod.GET)
+	@GetMapping(path="/utenti/email/{email}")
 	public Utente findByEmail2(@PathVariable String email) {
 		return this.utenteRepositery.findByEmail2(email);
 	}

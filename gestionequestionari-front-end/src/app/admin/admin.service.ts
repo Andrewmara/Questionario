@@ -18,11 +18,11 @@ export class AdminService {
 constructor(private http: HttpClient){}
 
 getUser(user: user){
-  return this.http.get<user>('http://localhost:8091/utenti')
+  return this.http.get<user>('http://localhost:8091/api/utenti')
   }
 
 SignUp(nome:string,cognome:string,email:string,password:string,ruolo:string){
-  return this.http.post<user>('http://localhost:8091/utenti',
+  return this.http.post<user>('http://localhost:8091/api/utenti',
   {
     nome:nome,
     cognome:cognome,
@@ -33,18 +33,18 @@ SignUp(nome:string,cognome:string,email:string,password:string,ruolo:string){
 }
 
 getUserById(id:number){
-  return this.http.get<user>('http://localhost:8091/utenti/'+id)
+  return this.http.get<user>('http://localhost:8091/api/utenti/'+id)
   }
 
 getCountCandidati(questionario:number){
-  return this.http.get<number>('http://localhost:8091/questionarioutente/'+questionario)
+  return this.http.get<number>('http://localhost:8091/api/questionarioutente/'+questionario)
 }
 
 getMediaPunteggi(questionario:number){
-  return this.http.get<number>('http://localhost:8091/questionarioutente/media/'+questionario)
+  return this.http.get<number>('http://localhost:8091/api/questionarioutente/media/'+questionario)
 }
 
 allQuestionari(){
-  return this.http.get('http://localhost:8091/questionari');
+  return this.http.get('http://localhost:8091/api/questionari');
 }
 }

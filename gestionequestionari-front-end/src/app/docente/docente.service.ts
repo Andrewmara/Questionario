@@ -27,26 +27,26 @@ currentUser = JSON.parse(localStorage.getItem('loggedUser') || '{}');
 
 
 getQuest(){
-  return this.http.get<questionari>('http://localhost:8091/questionari/'+this.currentUser.id_utente)
+  return this.http.get<questionari>('http://localhost:8091/api/questionari/'+this.currentUser.id_utente)
   }
 
 getCountCandidati(questionario:number){
-  return this.http.get<number>('http://localhost:8091/questionarioutente/'+questionario)
+  return this.http.get<number>('http://localhost:8091/api/questionarioutente/'+questionario)
 }
 
 getMediaPunteggi(questionario:number){
-  return this.http.get<number>('http://localhost:8091/questionarioutente/media/'+questionario)
+  return this.http.get<number>('http://localhost:8091/api/questionarioutente/media/'+questionario)
 }
 getUserQuest(questionario:number){
-  return this.http.get('http://localhost:8091/questionarioutente/user/'+questionario)
+  return this.http.get('http://localhost:8091/api/questionarioutente/user/'+questionario)
 }
 
 getUserById(id:number){
-  return this.http.get('http://localhost:8091/utenti/'+id)
+  return this.http.get('http://localhost:8091/api/utenti/'+id)
   }
 
 AddQuest(titolo:string,descrizione:string,docente:number){
-  return this.http.post<questionari>('http://localhost:8091/questionari',
+  return this.http.post<questionari>('http://localhost:8091/api/questionari',
   {
     titolo:titolo,
     descrizione:descrizione,
@@ -56,7 +56,7 @@ AddQuest(titolo:string,descrizione:string,docente:number){
 }
 
 AddDomanda(domanda:string,questionario:number,ris_giusta:string,ris_uno:string,ris_due:string,ris_tre:string,punteggio:number){
-  return this.http.post<domanda>('http://localhost:8091/domande',
+  return this.http.post<domanda>('http://localhost:8091/api/domande',
   {
     domanda:domanda,
     questionario:questionario,
@@ -70,7 +70,7 @@ AddDomanda(domanda:string,questionario:number,ris_giusta:string,ris_uno:string,r
 }
 
 punteggioUtente(utente:number,questionario:number){
-  return this.http.get('http://localhost:8091/punteggio/'+questionario+'/'+utente)
+  return this.http.get('http://localhost:8091/api/punteggio/'+questionario+'/'+utente)
 }
 
 
