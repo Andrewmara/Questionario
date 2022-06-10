@@ -22,9 +22,6 @@ import it.f2informatica.questionari.service.questionarioUtenteInterface;
 import it.f2informatica.questionari.service.risposteInterface;
 import it.f2informatica.questionari.service.utenteInterface;
 
-
-
-
 @Repository(value="MYSQL")
 public class JDBCRepository implements utenteInterface,questionarioInterface,domandaInterface,questionarioUtenteInterface,risposteInterface{
 	private Logger logger = LoggerFactory.getLogger(JDBCRepository.class);
