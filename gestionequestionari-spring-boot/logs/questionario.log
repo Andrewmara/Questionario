@@ -1,0 +1,6 @@
+2022-06-13 11:33:16,712 || INFO  i.f.q.GestionequestionariSpringApplication--55 - Starting GestionequestionariSpringApplication using Java 11.0.12 on oracle21.localdomain with PID 134580 (/home/developer/QUESTIONARI/Questionario/gestionequestionari-spring-boot/target/classes started by developer in /home/developer/QUESTIONARI/Questionario/gestionequestionari-spring-boot)
+2022-06-13 11:33:16,712 || DEBUG i.f.q.GestionequestionariSpringApplication--56 - Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-06-13 11:33:16,713 || INFO  i.f.q.GestionequestionariSpringApplication--640 - No active profile set, falling back to 1 default profile: "default"
+2022-06-13 11:33:22,147 || INFO  i.f.q.GestionequestionariSpringApplication--61 - Started GestionequestionariSpringApplication in 5.792 seconds (JVM running for 6.43)
+2022-06-13 11:34:24,660 || DEBUG i.f.q.repository.JDBCRepository--86 - Repository: Domande Domande [domanda=domanda1, questionario=1, ris_giusta=rg , ris_uno=r1 , ris_due=r2 , ris_tre=r3, id_domanda=1]
+2022-06-13 11:35:38,628 || DEBUG i.f.q.repository.JDBCRepository--86 - Repository: Domande Domande [domanda=COSA, questionario=1, ris_giusta=RG , ris_uno=R1 , ris_due=R2 , ris_tre=R3, id_domanda=0]

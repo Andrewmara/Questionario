@@ -1,17 +1,41 @@
-<configuration>
+<configuration scan="true" scanPeriod="15 seconds">
 
-  <appender name="FILE1" class="ch.qos.logback.core.FileAppender">
-    <file>./logs/questionario.log</file>
-    <encoder>
-      <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
-    </encoder>
+  <appender name="FILE1" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>./logs/questionario.log</file>
+		<rollingPolicy
+			class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>./logs/questionario.log.%d{yyyy-MM-dd}.gz</fileNamePattern>
+			<maxHistory>10</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%d |%X{requestId}| %-5level %logger{36}--%L - %msg%n
+			</pattern>
+		</encoder>
   </appender>
   
-  <appender name="FILE2" class="ch.qos.logback.core.FileAppender">
-    <file>./logs/spring.log</file>
-    <encoder>
-      <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
-    </encoder>
+  <appender name="FILE2" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>./logs/spring.log</file>
+		<rollingPolicy
+			class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>./logs/spring.log.%d{yyyy-MM-dd}.gz</fileNamePattern>
+			<maxHistory>10</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%d |%X{requestId}| %-5level %logger{36}--%L - %msg%n
+			</pattern>
+		</encoder>
+  </appender>
+   <appender name="FILE3" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>./logs/hibernate.log</file>
+		<rollingPolicy
+			class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>./logs/hibernate.log.%d{yyyy-MM-dd}.gz</fileNamePattern>
+			<maxHistory>10</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%d |%X{requestId}| %-5level %logger{36}--%L - %msg%n
+			</pattern>
+		</encoder>
   </appender>
 
   <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
@@ -20,14 +44,16 @@
     </encoder>
   </appender>
 
-  <logger name="it.f2informatica.questionari" level="DEBUG">
+  <logger name="it.f2informatica.questionari" additivity="false" level="DEBUG">
     <appender-ref ref="FILE1" />
   </logger>
 
   <logger name="org.springframework" additivity="false" level="DEBUG">
     <appender-ref ref="FILE2" />
   </logger>
- 
+   <logger name="org.hibernate" additivity="false" level="DEBUG">
+    <appender-ref ref="FILE3" />
+  </logger>
   <root level="ERROR">
 		<appender-ref ref="FILE2" />
 	</root>

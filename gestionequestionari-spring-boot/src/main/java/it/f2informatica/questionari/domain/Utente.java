@@ -1,11 +1,12 @@
 package it.f2informatica.questionari.domain;
 
-import org.springframework.stereotype.Repository;
-
-import javax.persistence.Embedded;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.springframework.stereotype.Repository;
 
 @Repository
 @Entity
@@ -14,23 +15,24 @@ import javax.persistence.Table;
 public class Utente {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	int id_utente;
 	String nome;
 	String cognome;
 	String ruolo;
 	String password;
 	String email;
-	
-	public Utente(){
+
+	public Utente() {
 	}
-	
-	public Utente(int id_utente,String nome,String cognome,String ruolo,String password,String email) {
-		this.id_utente=id_utente;
-		this.nome=nome;
-		this.cognome=cognome;
-		this.ruolo=ruolo;
-		this.password=password;
-		this.email=email;
+
+	public Utente(int id_utente, String nome, String cognome, String ruolo, String password, String email) {
+		this.id_utente = id_utente;
+		this.nome = nome;
+		this.cognome = cognome;
+		this.ruolo = ruolo;
+		this.password = password;
+		this.email = email;
 	}
 
 	public int getId_utente() {
@@ -83,9 +85,8 @@ public class Utente {
 
 	@Override
 	public String toString() {
-		return "Utente [id_utente=" + id_utente + ", password=" + password + ", nome=" + nome
-				+ ", email=" + email + ", cognome=" + cognome +", ruolo=" + ruolo +"]";
+		return "Utente [id_utente=" + id_utente + ", password=" + password + ", nome=" + nome + ", email=" + email
+				+ ", cognome=" + cognome + ", ruolo=" + ruolo + "]";
 	}
-	
-	
+
 }

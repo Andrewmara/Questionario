@@ -1,19 +1,32 @@
 package it.f2informatica.questionari.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+@Entity
+@Table(name = "questionario")
 public class Questionario {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	int id_questionario;
 	String titolo;
 	String descrizione;
 	int docente;
-	int id_questionario;
-	
-	
-	public Questionario(){
+
+	public Questionario() {
 	}
-	public Questionario(String titolo,String descrizione,int docente,int id_questionario) {
-		this.titolo=titolo;
-		this.descrizione=descrizione;
-		this.docente=docente;
-		this.id_questionario=id_questionario;
+
+	public Questionario(String titolo, String descrizione, int docente, int id_questionario) {
+		this.titolo = titolo;
+		this.descrizione = descrizione;
+		this.docente = docente;
+		this.id_questionario = id_questionario;
 	}
 
 	public String getTitolo() {
@@ -53,6 +66,5 @@ public class Questionario {
 		return "Questionario [titolo=" + titolo + ", descrizione=" + descrizione + ", docente=" + docente
 				+ ", id_questionario=" + id_questionario + "]";
 	}
-	
-	
+
 }

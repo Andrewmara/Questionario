@@ -1,27 +1,41 @@
 package it.f2informatica.questionari.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+@Entity
+@Table(name = "domande")
 public class Domande {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	int id_domanda;
 	String domanda;
 	int questionario;
-	int id_domanda;
 	String ris_giusta;
 	String ris_uno;
 	String ris_due;
 	String ris_tre;
 	int punteggio;
-	
-	public Domande(){
+
+	public Domande() {
 	}
-	
-	public Domande(String domanda, int questionario, int id_domanda,String ris_giusta,String ris_uno,String ris_due,String ris_tre,int punteggio) {
-		this.domanda=domanda;
-		this.questionario=questionario;
-		this.id_domanda=id_domanda;
-		this.ris_giusta=ris_giusta;
-		this.ris_uno=ris_uno;
-		this.ris_due=ris_due;
-		this.ris_tre=ris_tre;
-		this.punteggio=punteggio;
+
+	public Domande(String domanda, int questionario, int id_domanda, String ris_giusta, String ris_uno, String ris_due,
+			String ris_tre, int punteggio) {
+		this.domanda = domanda;
+		this.questionario = questionario;
+		this.id_domanda = id_domanda;
+		this.ris_giusta = ris_giusta;
+		this.ris_uno = ris_uno;
+		this.ris_due = ris_due;
+		this.ris_tre = ris_tre;
+		this.punteggio = punteggio;
 	}
 
 	public String getDomanda() {
@@ -55,8 +69,6 @@ public class Domande {
 	public void setId_domanda(int id_domanda) {
 		this.id_domanda = id_domanda;
 	}
-
-	
 
 	public String getRis_giusta() {
 		return ris_giusta;
@@ -92,9 +104,9 @@ public class Domande {
 
 	@Override
 	public String toString() {
-		return "Domande [domanda=" + domanda + ", questionario=" + questionario + ", ris_giusta=" + ris_giusta + " , ris_uno=" + ris_uno +  " , ris_due=" + ris_due +  " , ris_tre=" + ris_tre 
-				+ ", id_domanda=" + id_domanda + "]";
+		return "Domande [domanda=" + domanda + ", questionario=" + questionario + ", ris_giusta=" + ris_giusta
+				+ " , ris_uno=" + ris_uno + " , ris_due=" + ris_due + " , ris_tre=" + ris_tre + ", id_domanda="
+				+ id_domanda + "]";
 	}
-	
-	
+
 }
