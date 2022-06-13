@@ -101,47 +101,4 @@
 		</dependency>
 
 	</dependencies>
-
-
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>net.alchim31.maven</groupId>
-    <artifactId>yuicompressor-maven-plugin</artifactId>
-    <version>1.3.2</version>
-    <configuration>
-        <encoding>UTF-8</encoding>
-    </configuration>
-    <executions>
-        <execution>
-            <id>minifyJs</id>
-            <phase>prepare-package</phase>
-            <goals>
-                <goal>compress</goal>
-            </goals>
-            <configuration>
-                <nosuffix>true</nosuffix>
-                <sourceDirectory>js</sourceDirectory>
-                <outputDirectory>${project.build.directory}/js-min</outputDirectory>
-            </configuration>
-        </execution>
-        <execution>
-            <id>minifyCss</id>
-            <phase>prepare-package</phase>
-            <goals>
-                <goal>compress</goal>
-            </goals>
-            <configuration>
-                <nosuffix>true</nosuffix>
-                <sourceDirectory>css</sourceDirectory>
-                <outputDirectory>${project.build.directory}/css-min</outputDirectory>
-            </configuration>
-        </execution>
-    </executions>
-				
-			</plugin>
-		</plugins>
-	</build>
-
 </project>
