@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
 @Table(name = "questionario_utente")
 public class QuestionarioUtente {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	int questionario;
 	int utente;
 	int punteggio;

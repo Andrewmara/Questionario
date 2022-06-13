@@ -14,7 +14,7 @@ import org.springframework.stereotype.Repository;
 public class RisposteUtente {
 	int domanda;
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	String risposta;
 	int id_utente;
 
