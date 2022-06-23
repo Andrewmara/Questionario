@@ -9,7 +9,7 @@ import { QuestionarioUtente } from '../model/QuestionarioUtente';
   providedIn: 'root'
 })
 export class QuestionarioService {
-  url = "http://localhost:8091/api";
+  url = "http://192.168.1.230:8091/api";
   constructor(private httpClient: HttpClient) { }
   allQuestionari():Observable<Questionario[]>{
     return this.httpClient.get<Questionario[]>(`${this.url}` + '/questionari');
