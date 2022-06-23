@@ -7,11 +7,12 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import io.swagger.annotations.ApiResponse;
@@ -47,6 +48,9 @@ public class RisposteController {
 	public List<RisposteUtente> getRisp(){
 		return this.risposteRepository.findAllRispo();
 	}
-	
+	@DeleteMapping(path="/deleteRisp/{id_questionario}/{id_utente}")
+	public void deleteQuest(@PathVariable int id_questionario,@PathVariable int id_utente) {
+		this.risposteRepository.deleteAllRispByQuestUtent(id_questionario, id_utente);
+	 }
 
 }

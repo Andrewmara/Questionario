@@ -20,7 +20,7 @@
         <td>{{quest.titolo}}</td>
         <td>{{quest.descrizione}}</td>
         <td>{{nCand[i]}}
-          <a (click)="utentiqu(quest.id_questionario)"><button style="background-color:transparent;border: none;font-size: 4px;" (click)="Open(i)" *ngIf="dropdown[i]==false"><mat-icon style="text-align: right;font-size: 20px;">keyboard_arrow_down</mat-icon></button></a>
+          <a (click)="utentiqu(quest.id)"><button style="background-color:transparent;border: none;font-size: 4px;" (click)="Open(i)" *ngIf="dropdown[i]==false"><mat-icon style="text-align: right;font-size: 20px;">keyboard_arrow_down</mat-icon></button></a>
         <button style="background-color:transparent;border: none;font-size: 4px;" (click)="Close(i)" *ngIf="dropdown[i]==true"><mat-icon style="text-align: right;font-size: 20px;">keyboard_arrow_up</mat-icon></button>
         </td>
         <td>{{media[i]}}%</td>

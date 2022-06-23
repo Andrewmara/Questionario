@@ -6,16 +6,16 @@ export interface questionari{
     length: number;
     titolo:string,
     descrizione:string,
-    docente:number,
-    id_questionario:number
+    id:number,
+    id_utente:number
 }
 
 export interface domanda{
   domanda: string,
   punteggio: number,
-  questionario: number,
+  id_questionario: number,
   ris_due: string,
-  ris_giusta: string,
+  giusta: string,
   ris_tre: string,
   ris_uno: string
 }
@@ -27,11 +27,11 @@ currentUser = JSON.parse(localStorage.getItem('loggedUser') || '{}');
 
 
 getQuest(){
-  return this.http.get<questionari>('http://localhost:8091/api/questionari/'+this.currentUser.id_utente)
+  return this.http.get<questionari>('http://localhost:8091/api/questionari/'+this.currentUser.id)
   }
 
-getCountCandidati(questionario:number){
-  return this.http.get<number>('http://localhost:8091/api/questionarioutente/'+questionario)
+getCountCandidati(id:number){
+  return this.http.get<number>('http://localhost:8091/api/questionarioutente/'+id)
 }
 
 getMediaPunteggi(questionario:number){
@@ -45,22 +45,22 @@ getUserById(id:number){
   return this.http.get('http://localhost:8091/api/utenti/'+id)
   }
 
-AddQuest(titolo:string,descrizione:string,docente:number){
+AddQuest(titolo:string,descrizione:string,id_utente:number){
   return this.http.post<questionari>('http://localhost:8091/api/questionari',
   {
     titolo:titolo,
     descrizione:descrizione,
-    docente:docente
+    id_utente:id_utente
   })
 
 }
 
-AddDomanda(domanda:string,questionario:number,ris_giusta:string,ris_uno:string,ris_due:string,ris_tre:string,punteggio:number){
+AddDomanda(domanda:string,id_questionario:number,giusta:string,ris_uno:string,ris_due:string,ris_tre:string,punteggio:number){
   return this.http.post<domanda>('http://localhost:8091/api/domande',
   {
     domanda:domanda,
-    questionario:questionario,
-    ris_giusta:ris_giusta,
+    id_questionario:id_questionario,
+    giusta:giusta,
     ris_uno:ris_uno,
     ris_due:ris_due,
     ris_tre:ris_tre,

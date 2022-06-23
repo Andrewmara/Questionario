@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class GestionequestionariSpringApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GestionequestionariSpringApplication.class, args);
+		 SpringApplication.run(GestionequestionariSpringApplication.class, args);
 	}
 
 }

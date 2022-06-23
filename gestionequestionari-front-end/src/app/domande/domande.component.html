@@ -11,7 +11,7 @@
         </div>
         <div class="score">
             <p> Total Score: {{pScore}}</p>
-            <p class="card-title display-4" style="text-align:center; margin-left: 20px;"><mat-icon>alarm</mat-icon> Tempo: {{timeLeft}} s</p>
+            <p  class="card-title display-4" style="text-align:center; margin-left: 20px;" id="tempo"><mat-icon>alarm</mat-icon> Tempo: {{timeLeft}} s</p>
             <p>Question: {{ndomande}}/40</p>
         </div>
 
@@ -29,27 +29,31 @@
 
                 <h3 class="body-font"> {{indexOfelement}}. {{d.domanda}}</h3>
                 <label class="cursor">
-                    <input type="radio" name="{{d.id_domanda}}" value="{{d.ris_giusta}}" id="q1a" class="display-5 mx-1"
-                        [disabled]="beforeTest" (change)="radioChangeHandler($event)"> a. {{d.ris_giusta}}
+                    <input type="radio" name="{{d.id}}" value="{{d.giusta}}" id="q1a" class="display-5 mx-1"
+                        [disabled]="success" (change)="radioChangeHandler($event)"> a. {{d.giusta}}
                 </label>
+                <mat-icon *ngIf="v==true" style="margin-left:10px;color:green">done</mat-icon>
                 <br>
                 <label class="cursor">
-                    <input type="radio" name="{{d.id_domanda}}" value="{{d.ris_uno}}" id="q1b"
-                        class="display-5 mx-1" [disabled]="beforeTest" (change)="radioChangeHandler($event)"> b.
+                    <input type="radio" name="{{d.id}}" value="{{d.ris_uno}}" id="q1b"
+                        class="display-5 mx-1" [disabled]="success" (change)="radioChangeHandler($event)"> b.
                         {{d.ris_uno}}
                 </label>
+                <mat-icon *ngIf="corretto[indexOfelement]==false && d.ris_uno==this.risposte[indexOfelement].risposta" style="margin-left:10px;color:red">close</mat-icon>
                 <br>
                 <label class="cursor">
-                    <input type="radio" name="{{d.id_domanda}}" value="{{d.ris_due}}" id="q1c"
-                        class="display-5 mx-1" [disabled]="beforeTest" (change)="radioChangeHandler($event)"> c.
+                    <input type="radio" name="{{d.id}}" value="{{d.ris_due}}" id="q1c"
+                        class="display-5 mx-1" [disabled]="success" (change)="radioChangeHandler($event)"> c.
                         {{d.ris_due}}
                 </label>
+                <mat-icon *ngIf="corretto[indexOfelement]==false && d.ris_due==this.risposte[indexOfelement].risposta" style="margin-left:10px;color:red;vertical-align: middle;">close</mat-icon>
                 <br>
                 <label class="cursor">
-                    <input type="radio" name="{{d.id_domanda}}" value="{{d.ris_tre}}" id="q1c"
-                        class="display-5 mx-1" [disabled]="beforeTest" (change)="radioChangeHandler($event)"> d.
+                    <input type="radio" name="{{d.id}}" value="{{d.ris_tre}}" id="q1c"
+                        class="display-5 mx-1" [disabled]="success" (change)="radioChangeHandler($event)"> d.
                         {{d.ris_tre}}
                 </label>
+                <mat-icon *ngIf="corretto[indexOfelement]==false && d.ris_tre==this.risposte[indexOfelement].risposta" style="margin-left:10px;color:red">close</mat-icon>
                 <hr>
                 <br><br>
             </div>

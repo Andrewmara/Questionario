@@ -1,81 +1,104 @@
 package it.f2informatica.questionari.domain;
 
+import java.io.Serializable;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 import org.springframework.stereotype.Repository;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import lombok.Data;
+
 @Repository
+@Data
 @Entity
 @Table(name = "domande")
-public class Domande {
+public class Domande implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	int id_domanda;
-	String domanda;
-	int questionario;
-	String ris_giusta;
-	String ris_uno;
-	String ris_due;
-	String ris_tre;
-	int punteggio;
+	@Column(name="id")
+	private Long id;
+	
+	@Column(name="domanda")
+	private String domanda;
+	
+	@Column(name="giusta")
+	private String giusta;
+	
+	@Column(name="ris_uno")
+	private String ris_uno;
+	
+	@Column(name="ris_due")
+	private String ris_due;
+	
+	@Column(name="ris_tre")
+	private String ris_tre;
+	
+	@Column(name="punteggio")
+	private int punteggio;
+	
+	@JoinColumn(name = "id_questionario")
+	@ManyToOne(targetEntity = Questionario.class, fetch = FetchType.LAZY)
+	@NotNull(message = "Quest not set")
+	@JsonIgnore
+    private Questionario questionario;
+	
+	@Column(name = "id_questionario", insertable = false, updatable = false)
+	private Long id_questionario;
 
 	public Domande() {
 	}
 
-	public Domande(String domanda, int questionario, int id_domanda, String ris_giusta, String ris_uno, String ris_due,
-			String ris_tre, int punteggio) {
+	public Domande(String domanda, String giusta, String ris_uno, String ris_due, String ris_tre, int punteggio) {
+		super();
 		this.domanda = domanda;
-		this.questionario = questionario;
-		this.id_domanda = id_domanda;
-		this.ris_giusta = ris_giusta;
+		this.giusta = giusta;
 		this.ris_uno = ris_uno;
 		this.ris_due = ris_due;
 		this.ris_tre = ris_tre;
 		this.punteggio = punteggio;
+	}
+	
+	
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getDomanda() {
 		return domanda;
 	}
 
-	public int getPunteggio() {
-		return punteggio;
-	}
-
-	public void setPunteggio(int punteggio) {
-		this.punteggio = punteggio;
-	}
-
 	public void setDomanda(String domanda) {
 		this.domanda = domanda;
 	}
 
-	public int getQuestionario() {
-		return questionario;
+
+	public String getGiusta() {
+		return giusta;
 	}
 
-	public void setQuestionario(int questionario) {
-		this.questionario = questionario;
-	}
-
-	public int getId_domanda() {
-		return id_domanda;
-	}
-
-	public void setId_domanda(int id_domanda) {
-		this.id_domanda = id_domanda;
-	}
-
-	public String getRis_giusta() {
-		return ris_giusta;
-	}
-
-	public void setRis_giusta(String ris_giusta) {
-		this.ris_giusta = ris_giusta;
+	public void setGiusta(String giusta) {
+		this.giusta = giusta;
 	}
 
 	public String getRis_uno() {
@@ -102,11 +125,41 @@ public class Domande {
 		this.ris_tre = ris_tre;
 	}
 
+	public int getPunteggio() {
+		return punteggio;
+	}
+
+	public void setPunteggio(int punteggio) {
+		this.punteggio = punteggio;
+	}
+
+	public Questionario getQuestionario() {
+		return questionario;
+	}
+
+	public void setQuestionario(Questionario questionario) {
+		this.questionario = questionario;
+	}
+
+	public Long getId_questionario() {
+		return id_questionario;
+	}
+
+	public void setId_questionario(Long id_questionario) {
+		this.id_questionario = id_questionario;
+	}
+
 	@Override
 	public String toString() {
-		return "Domande [domanda=" + domanda + ", questionario=" + questionario + ", ris_giusta=" + ris_giusta
-				+ " , ris_uno=" + ris_uno + " , ris_due=" + ris_due + " , ris_tre=" + ris_tre + ", id_domanda="
-				+ id_domanda + "]";
+		return "Domande [id=" + id + ", domanda=" + domanda + ", giusta=" + giusta + ", ris_uno=" + ris_uno
+				+ ", ris_due=" + ris_due + ", ris_tre=" + ris_tre + ", punteggio=" + punteggio + ", id_questionario="
+				+ id_questionario + "]";
 	}
+
+
+
+	
+
+
 
 }

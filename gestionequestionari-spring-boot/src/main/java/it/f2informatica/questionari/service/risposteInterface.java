@@ -11,4 +11,6 @@ public interface risposteInterface {
 	
 	List<RisposteUtente> findAllRispo();
 
+	void deleteAllRispByQuestUtent(int id_questionario, int id_utente);
+
 }

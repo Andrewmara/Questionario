@@ -35,8 +35,7 @@ public class QuestionarioController {
 	
 	@PostMapping(path="/questionari")
 	public int addQuest(@RequestBody Questionario newQuest) {
-    this.questionarioRepository.saveQuest(newQuest);
-    return this.questionarioRepository.idQuestionario(newQuest.getTitolo(), newQuest.getDescrizione(), newQuest.getDocente());
+     return this.questionarioRepository.saveQuest(newQuest);
 	}
 	
 	@GetMapping(path="/questionari")
@@ -44,9 +43,9 @@ public class QuestionarioController {
 		return this.questionarioRepository.findAllQuest();
 	}
 	
-	@GetMapping(path="/questionari/{docente}")
-	public List<Questionario> findQuestBydocente(@PathVariable int docente){
-		return this.questionarioRepository.findQuestByDocente(docente);
+	@GetMapping(path="/questionari/{id_utente}")
+	public List<Questionario> findQuestBydocente(@PathVariable Long id_utente){
+		return this.questionarioRepository.findQuestByDocente(id_utente);
 	}
 	
 }

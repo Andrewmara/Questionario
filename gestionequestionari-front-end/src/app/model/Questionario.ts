@@ -1,6 +1,6 @@
 export class Questionario{
-    public id_questionario!: number;
+    public id!: number;
     public titolo!: string;
     public descrizione!: string;
-    public docente!: number;
+    public id_utente!: number;
 }

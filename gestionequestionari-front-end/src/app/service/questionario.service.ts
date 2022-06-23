@@ -25,8 +25,8 @@ export class QuestionarioService {
     return this.httpClient.get<QuestionarioUtente>(`${this.url}/questionarioutente/utente/${id}`);
   }
 
-  getTitoloDes(id: number): Observable<QuestionarioUtente>{
-    return this.httpClient.get<QuestionarioUtente>(`${this.url}/questionarioutente/titolo/${id}`);
+  getTitoloDes(id: number){
+    return this.httpClient.get(`${this.url}/questionarioutente/titolo/${id}`);
   }
 
   getNumdomande(id: number): Observable<number>{

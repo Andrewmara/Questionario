@@ -1,6 +1,7 @@
 package it.f2informatica.questionari.repository;
 
 import java.util.List;
+import java.util.Set;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -44,7 +45,7 @@ public class JDBCRepository implements utenteInterface,questionarioInterface,dom
 	@Override
 	public Utente findById(int id_utente) {
 		logger.debug("Repository: id utente: {}",id_utente);
-		return jdbcTemplate.queryForObject("SELECT * FROM utente WHERE id_utente=?", BeanPropertyRowMapper.newInstance(Utente.class),id_utente);
+		return jdbcTemplate.queryForObject("SELECT * FROM utente WHERE id=?", BeanPropertyRowMapper.newInstance(Utente.class),id_utente);
 	}
 
 	@Override
@@ -57,7 +58,7 @@ public class JDBCRepository implements utenteInterface,questionarioInterface,dom
 	@Override
 	public int saveQuest(Questionario q) {
 		logger.debug("Repository: Questionario {}",q);
-		return jdbcTemplate.update("INSERT INTO questionario(titolo,descrizione,docente) VALUE(?,?,?)",new Object[] {q.getTitolo(), q.getDescrizione(), q.getDocente()});
+		return jdbcTemplate.update("INSERT INTO questionario(titolo,descrizione,id_utente) VALUE(?,?,?)",new Object[] {q.getTitolo(), q.getDescrizione(), q.getId_utente()});
 	}
 
 	@Override
@@ -67,24 +68,24 @@ public class JDBCRepository implements utenteInterface,questionarioInterface,dom
 	}
 	
 	@Override
-	public List<Questionario> findQuestByDocente(int docente) {
+	public List<Questionario> findQuestByDocente(Long id_utente) {
 		logger.debug("Repository:tutti i questionari");
-		return jdbcTemplate.query("SELECT *\r\n"
-				+ "FROM questionario q\r\n"
-				+ "WHERE q.docente = ?", BeanPropertyRowMapper.newInstance(Questionario.class),docente);
+		return jdbcTemplate.query("SELECT questionario.id, questionario.descrizione, questionario.id_utente, questionario.titolo FROM questionario INNER JOIN utente \r\n"
+				+ "ON questionario.id_utente = utente.id\r\n"
+				+ "WHERE questionario.id_utente = ?", BeanPropertyRowMapper.newInstance(Questionario.class),id_utente);
 	}
 	
 	@Override
-	public Integer idQuestionario(String titolo,String descrizione, int docente) {
-		return jdbcTemplate.queryForObject("SELECT q.id_questionario\r\n"
+	public Integer idQuestionario(String titolo,String descrizione,Utente docente) {
+		return jdbcTemplate.queryForObject("SELECT q.id\r\n"
 				+ "FROM questionario q\r\n"
-				+ "WHERE q.titolo = ? AND q.descrizione = ? AND q.docente = ?",Integer.class,titolo,descrizione,docente);
+				+ "WHERE q.titolo = ? AND q.descrizione = ? AND q.id_utente = ?",Integer.class,titolo,descrizione,docente);
 	}
 //-------------Domande---------------------------
 	@Override
 	public int saveDoma(Domande d) {
 		logger.debug("Repository: Domande {}",d);
-		return jdbcTemplate.update("INSERT INTO domande(domanda,questionario,ris_giusta,ris_uno,ris_due,ris_tre,punteggio) VALUE(?,?,?,?,?,?,?)",new Object[] {d.getDomanda(), d.getQuestionario(), d.getRis_giusta(),d.getRis_uno(),d.getRis_due(),d.getRis_tre(),d.getPunteggio()});
+		return jdbcTemplate.update("INSERT INTO domande(domanda,id_questionario,giusta,ris_uno,ris_due,ris_tre,punteggio) VALUE(?,?,?,?,?,?,?)",new Object[] {d.getDomanda(), d.getId_questionario(), d.getGiusta(),d.getRis_uno(),d.getRis_due(),d.getRis_tre(),d.getPunteggio()});
 		
 	}
 
@@ -97,21 +98,21 @@ public class JDBCRepository implements utenteInterface,questionarioInterface,dom
 	@Override
 	public List<Domande> findAllDomaByQuestId(int id_questionario) {
 		logger.debug("Repository:tutte le domande id del questionario");
-		return jdbcTemplate.query("SELECT * FROM domande WHERE questionario=?", BeanPropertyRowMapper.newInstance(Domande.class),id_questionario);
+		return jdbcTemplate.query("SELECT * FROM domande WHERE id_questionario=?", BeanPropertyRowMapper.newInstance(Domande.class),id_questionario);
 	}
 	
 	@Override
 	public Integer nDomande(int questionario) {
 		return jdbcTemplate.queryForObject("SELECT COUNT(d.domanda)\r\n"
 				+ "FROM domande d\r\n"
-				+ "WHERE d.questionario = ?", Integer.class,questionario);
+				+ "WHERE d.id_questionario = ?", Integer.class,questionario);
 	}
 	
 	@Override
 	public Integer Ptot(int questionario) {
 		return jdbcTemplate.queryForObject("SELECT SUM(d.punteggio)\r\n"
 				+ "FROM domande d\r\n"
-				+ "WHERE d.questionario = ?", Integer.class,questionario);
+				+ "WHERE d.id_questionario = ?", Integer.class,questionario);
 	}
 	
 	
@@ -119,7 +120,7 @@ public class JDBCRepository implements utenteInterface,questionarioInterface,dom
 	@Override
 	public int saveQU(QuestionarioUtente qu) {
 		logger.debug("Repository: QuestionarioUtente {}",qu);
-		return jdbcTemplate.update("INSERT INTO questionario_utente(questionario,utente,punteggio) VALUE(?,?,?)",new Object[] {qu.getQuestionario(), qu.getUtente(), qu.getPunteggio()});
+		return jdbcTemplate.update("INSERT INTO questionario_utente(id_questionario,id_utente,punteggio) VALUE(?,?,?)",new Object[] {qu.getId_questionario(), qu.getId_utente(), qu.getPunteggio()});
 		
 	}
 
@@ -131,47 +132,49 @@ public class JDBCRepository implements utenteInterface,questionarioInterface,dom
 	
 	@Override
 	public Integer countCandidati(int questionario) {
-		return jdbcTemplate.queryForObject("SELECT count(q.utente) \r\n"
+		return jdbcTemplate.queryForObject("SELECT count(q.id_utente) \r\n"
 				+ "FROM questionario_utente q\r\n"
-				+ "WHERE q.questionario = ?",Integer.class,questionario);
+				+ "WHERE q.id_questionario = ?",Integer.class,questionario);
 	}
 	
 	@Override
 	public Integer mediaPunteggi(int questionario) {
 		return jdbcTemplate.queryForObject("SELECT AVG(q.punteggio)\r\n"
 				+ "FROM questionario_utente q\r\n"
-				+ "WHERE q.questionario = ?",Integer.class,questionario);
+				+ "WHERE q.id_questionario = ?",Integer.class,questionario);
 	}
 	
 	@Override
 	public List<Utente> findUserOfQuest(int questionario) {
-		return jdbcTemplate.query("SELECT u.nome, u.cognome, u.id_utente \r\n"
+		return jdbcTemplate.query("SELECT u.nome, u.cognome, u.id \r\n"
 				+ "FROM questionario_utente q INNER JOIN utente u\r\n"
-				+ "ON q.utente = u.id_utente\r\n"
-				+ "WHERE q.questionario = ?", BeanPropertyRowMapper.newInstance(Utente.class),questionario);
+				+ "ON q.id_utente = u.id\r\n"
+				+ "INNER JOIN ruolo r\r\n"
+				+ "ON r.ruolo = u.ruolo\r\n"
+				+ "WHERE q.id_questionario = ?", BeanPropertyRowMapper.newInstance(Utente.class),questionario);
 	}
 	
 	@Override
 	public List<QuestionarioUtente> findQuestOfUser(int utente) {
 		return jdbcTemplate.query("SELECT *\r\n"
 				+ "FROM questionario_utente q\r\n"
-				+ "WHERE q.utente = ?", BeanPropertyRowMapper.newInstance(QuestionarioUtente.class),utente);
+				+ "WHERE q.id_utente = ?", BeanPropertyRowMapper.newInstance(QuestionarioUtente.class),utente);
 	}
 	
 	@Override
 	public Integer punteggioUtente(int utente,int questionario) {
 		return jdbcTemplate.queryForObject("SELECT q.punteggio\r\n"
 				+ "FROM questionario_utente q\r\n"
-				+ "WHERE q.utente = ? AND q.questionario = ?",Integer.class,utente,questionario);
+				+ "WHERE q.id_utente = ? AND q.id_questionario = ?",Integer.class,utente,questionario);
 	}
 	
 	@Override
 	public List<Questionario> TitoloDescrizion(int utente) {
-		return jdbcTemplate.query("SELECT qu.titolo,qu.descrizione,qu.id_questionario\r\n"
+		return jdbcTemplate.query("SELECT qu.titolo,qu.descrizione,qu.id\r\n"
 				+ "FROM \r\n"
 				+ "questionario qu INNER JOIN questionario_utente q\r\n"
-				+ "ON q.questionario = qu.id_questionario\r\n"
-				+ "WHERE q.utente = ?", BeanPropertyRowMapper.newInstance(Questionario.class),utente);
+				+ "ON q.id_questionario = qu.id\r\n"
+				+ "WHERE q.id_utente = ?", BeanPropertyRowMapper.newInstance(Questionario.class),utente);
 	}
 	
 	
@@ -179,32 +182,35 @@ public class JDBCRepository implements utenteInterface,questionarioInterface,dom
 	public Integer QuestAlredyDone(int questionario, int utente) {
 		return jdbcTemplate.queryForObject("SELECT u.punteggio\r\n"
 				+ "FROM questionario_utente u\r\n"
-				+ "WHERE u.questionario = ? AND u.utente = ?",Integer.class,questionario, utente);
+				+ "WHERE u.id_questionario = ? AND u.id_utente = ?",Integer.class,questionario, utente);
 	}
 	
 	@Override
 	public void deleteQuest(int questionario, int utente) {
 		 jdbcTemplate.update("DELETE FROM questionario_utente q\r\n"
-				+ "WHERE q.questionario = ? AND q.utente = ?",questionario, utente);
+				+ "WHERE q.id_questionario = ? AND q.id_utente = ?",questionario, utente);
 	}
 	
 //------------RisposteUtente---------------------
 
 	@Override
 	public int saveRisposte(RisposteUtente r) {
-		logger.debug("Repository: RisposteUntete {}",r);
-		return jdbcTemplate.update("INSERT INTO risposteutente(domanda,risposta,id_utente) VALUE(?,?,?)",new Object[] {r.getDomanda(), r.getRisposta(), r.getId_utente()});
+		logger.debug("Repository: RisposteUtente {}",r);
+		return jdbcTemplate.update("INSERT INTO risposte_utente(id,risposta,id_utente,id_questionario) VALUE(?,?,?,?)",new Object[] {r.getId(), r.getRisposta(), r.getId_utente(), r.getId_questionario()});
 		
 	}
 
 	@Override
 	public List<RisposteUtente> findAllRispo() {
 		logger.debug("Repository:tutte le risposte");
-		return jdbcTemplate.query("SELECT * FROM risposteutente", BeanPropertyRowMapper.newInstance(RisposteUtente.class));
+		return jdbcTemplate.query("SELECT * FROM risposte_utente", BeanPropertyRowMapper.newInstance(RisposteUtente.class));
 	}
 
 	
-	
+	@Override
+	public void deleteAllRispByQuestUtent(int id_questionario, int id_utente) {
+		 jdbcTemplate.update("DELETE FROM risposte_utente r WHERE r.id_questionario = ? AND r.id_utente = ?",id_questionario, id_utente);
+	}
 	
 	
 }

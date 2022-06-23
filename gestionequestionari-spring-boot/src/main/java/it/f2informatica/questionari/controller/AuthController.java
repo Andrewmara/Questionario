@@ -25,7 +25,7 @@ public class AuthController {
     @GetMapping(path = "/basicauth/{email}")
     public String getUserRole(@PathVariable("email") String email) {
         Utente utente = this.userRepository.findByEmail(email);
-        return utente.getRuolo();
+        return utente.getRuolo().toString();
     }
 
 

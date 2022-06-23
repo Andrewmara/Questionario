@@ -34,10 +34,13 @@ export class DomandeComponent implements OnInit {
   pScore=0;
   ndomande!: number
   success=false
+  corretto:Array<Boolean> =[]
+  v=false
+
   constructor(private questionarioservice: QuestionarioService, private utenteService: UtenteService, public quest: QuestionarioService, public activatedRoute: ActivatedRoute, private ruservice: RiposteUtenteService, private router: Router) { }
 
   ngOnInit(): void {
-    console.log(this.currentUser.id_utente)
+    console.log(this.currentUser.id)
     console.log(this.currentUser.email)
     console.log(this.currentUser.nome)
     console.log(this.id)
@@ -52,7 +55,7 @@ export class DomandeComponent implements OnInit {
     this.questionarioservice.allQuestionari().subscribe(data => {
       console.log(data)
       for (let i = 0; i < data.length; i++) {
-        if (data[i].id_questionario == this.id) {
+        if (data[i].id == this.id) {
           this.questName = data[i].titolo
         }
       }
@@ -69,39 +72,47 @@ export class DomandeComponent implements OnInit {
   getAllQuestionario() {
     this.questionarioservice.allQuestionari().subscribe(data => {
       for (let i = 0; i < data.length; i++) {
-        if (data[i].id_questionario == this.id) {
+        if (data[i].id == this.id) {
           this.questName = data[i].titolo
         }
       }
     })
   }
   checkScore() {
-    this.risposte.filter(risposta => {
-      console.log(risposta)
-      this.ruservice.addRisposteUtente(risposta).forEach(data => {
-        console.log("fe")
+
+console.log(this.risposte)
+    for(let i=0;i<this.risposte.length;i++){
+      this.ruservice.addRisposteUtente(this.risposte[i]).forEach(data => {
+        console.log(data)
       }
       );
     }
-    )
+
     this.questionarioservice.allDomande().forEach((domande) => {
+      console.log(domande)
       for (let i = 0; i < domande.length; i++) {
         for (let j = 0; j < this.risposte.length; j++) {
-          if (domande[i].id_domanda == this.risposte[j].domanda) {
-            if (domande[i].ris_giusta == this.risposte[j].risposta) {
+          if (domande[i].id == this.risposte[j].id) {
+            if (domande[i].giusta == this.risposte[j].risposta) {
               console.log("corretto")
+              this.v=true
+              this.corretto[i]=true
               this.punteggioTot += domande[i].punteggio;
             } else {
               console.log("sbagliata")
+              this.v=true
+              this.corretto[i]=false
             }
           }
         }
       }
 
+      console.log(this.corretto)
       console.log("voto: " + this.punteggioTot)
-      this.questUtente = new QuestionarioUtente(this.punteggioTot, Number(this.id), this.currentUser.id_utente)
+      this.questUtente = new QuestionarioUtente(this.punteggioTot, Number(this.id), this.currentUser.id)
       this.ruservice.postQuesteUtente(this.questUtente).subscribe(data => {
         console.log(data)
+
       })
     })
     // this.router.navigate(['/candidato']);
@@ -109,6 +120,7 @@ export class DomandeComponent implements OnInit {
     this.color = "red"
     this.success=true
     document.getElementById("submitAnswers")!.style.visibility="hidden";
+    document.getElementById("tempo")!.style.visibility="hidden";
   }
 
   radioChangeHandler(event: any) {
@@ -117,21 +129,22 @@ export class DomandeComponent implements OnInit {
     this.selectedDomanda = event.target.name //Domanda
 
     if (!this.isExist(this.selectedDomanda)) {
-      this.risposte.push(new Risposta(this.id, this.selectedDomanda, this.selectedRisposta));
+      this.risposte.push(new Risposta( this.selectedDomanda, this.id,this.currentUser.id, this.selectedRisposta));
     } else {
-      this.indexToChange = this.risposte.findIndex((obj => obj.domanda == this.selectedDomanda));
+      this.indexToChange = this.risposte.findIndex((obj => obj.id == this.selectedDomanda));
       this.risposte[this.indexToChange].risposta = this.selectedRisposta
+      console.log(this.risposte)
     }
   }
 
-  isExist(domanda: any) {
+  isExist(id: any) {
     return this.risposte.some(function (d) {
-      return d.domanda === domanda;
+      return d.id === id;
     });
   }
   startTimer() {
     let startDate = new Date();
-    let second = startDate.getSeconds() + 60;
+    let second = startDate.getSeconds() + 600;
     let endDate = new Date()
     endDate.setSeconds(second);
     this.timeLeft = Math.floor((endDate.getTime() - startDate.getTime()) / 1000);

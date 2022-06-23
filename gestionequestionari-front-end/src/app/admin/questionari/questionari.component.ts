@@ -23,13 +23,14 @@ export class QuestionariComponent implements OnInit {
   ngOnInit(){
     this.quest.allQuestionari().subscribe(data=>{
       this.questList=data
+      console.log(data)
       this.size=data.length
       for(let i=0;i<this.size;i++){
-          this.admin.getUserById(this.questList[i].docente).subscribe(data=>{
+          this.admin.getUserById(this.questList[i].id_utente).subscribe(data=>{
           this.docenti[i]=data.nome +" "+ data.cognome
-          this.admin.getCountCandidati(this.questList[i].id_questionario).subscribe(data=>{
+          this.admin.getCountCandidati(this.questList[i].id).subscribe(data=>{
           this.nCand[i]=data
-          this.admin.getMediaPunteggi(this.questList[i].id_questionario).subscribe(data=>{
+          this.admin.getMediaPunteggi(this.questList[i].id).subscribe(data=>{
           this.media[i]=data
           if(this.media[i]<1){
             this.media[i]=0

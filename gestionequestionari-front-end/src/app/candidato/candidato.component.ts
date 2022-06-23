@@ -34,7 +34,7 @@ export class CandidatoComponent implements OnInit {
       console.log(data);
       this.quest = data;
       for(let i=0;i<this.quest.length;i++){
-        this.service.AlreadyDone(this.quest[i].id_questionario,this.currentUser.id_utente).subscribe(data=>{
+        this.service.AlreadyDone(this.quest[i].id,this.currentUser.id).subscribe(data=>{
           console.log(data)
           this.titolo[i]=this.quest[i].titolo
           console.log(this.titolo)
@@ -68,8 +68,8 @@ export class CandidatoComponent implements OnInit {
    this.dialog.open(PopupComponent,{
     data : {
       titolo : this.titolo[i],
-      id_utente: this.currentUser.id_utente,
-      id_quest: this.quest[i].id_questionario
+      id_utente: this.currentUser.id,
+      id_quest: this.quest[i].id
 
     }
    });

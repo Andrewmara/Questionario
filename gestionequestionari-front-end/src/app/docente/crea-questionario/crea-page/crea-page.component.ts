@@ -49,6 +49,7 @@ export class CreaPageComponent implements OnInit {
 
   ngOnInit(): void {
 
+    console.log(this.currentUser.id)
     this.form = {
 			domande:[]
 		};
@@ -102,7 +103,7 @@ export class CreaPageComponent implements OnInit {
     console.group( "Richieste" );
     const titolo=form.value.titolo;
     const descrizione=form.value.descrizione;
-    this.http.AddQuest(titolo,descrizione,this.currentUser.id_utente).subscribe(data=>{
+    this.http.AddQuest(titolo,descrizione,this.currentUser.id).subscribe(data=>{
       this.idQuest=data
       console.log(titolo,descrizione)
       console.log(data)

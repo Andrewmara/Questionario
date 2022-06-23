@@ -1,6 +1,822 @@
-2022-06-13 11:42:21,970 || INFO  i.f.q.GestionequestionariSpringApplication--55 - Starting GestionequestionariSpringApplication using Java 11.0.12 on oracle21.localdomain with PID 143421 (/home/developer/QUESTIONARI/Questionario/gestionequestionari-spring-boot/target/classes started by developer in /home/developer/QUESTIONARI/Questionario/gestionequestionari-spring-boot)
-2022-06-13 11:42:21,971 || DEBUG i.f.q.GestionequestionariSpringApplication--56 - Running with Spring Boot v2.6.7, Spring v5.3.19
-2022-06-13 11:42:21,972 || INFO  i.f.q.GestionequestionariSpringApplication--640 - No active profile set, falling back to 1 default profile: "default"
-2022-06-13 11:42:25,975 || INFO  i.f.q.GestionequestionariSpringApplication--61 - Started GestionequestionariSpringApplication in 4.566 seconds (JVM running for 5.236)
-2022-06-13 11:44:24,044 || DEBUG i.f.q.repository.JDBCRepository--86 - Repository: Domande Domande [domanda=COSA, questionario=1, ris_giusta=RG , ris_uno=R1 , ris_due=R2 , ris_tre=R3, id_domanda=0]
-2022-06-13 11:48:23,517 || DEBUG i.f.q.repository.JDBCRepository--34 - Repository: Utente Utente [id_utente=0, password=$2a$10$.mcqt/npV2Ov1KfOjV231uBDhpGXEp0LmiOg9x/QHDmSYIi2B9yEu, nome=string, email=string, cognome=string, ruolo=string]
+2022-06-23 09:13:13,949 || INFO  i.f.q.GestionequestionariSpringApplication--55 - Starting GestionequestionariSpringApplication using Java 16.0.2 on ITSAR-ND6375HH5 with PID 15496 (C:\Users\FrancoCeruti\Desktop\Questionario\gestionequestionari-spring-boot\target\classes started by FrancoCeruti in C:\Users\FrancoCeruti\Desktop\Questionario\gestionequestionari-spring-boot)
+2022-06-23 09:13:13,955 || DEBUG i.f.q.GestionequestionariSpringApplication--56 - Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-06-23 09:13:13,957 || INFO  i.f.q.GestionequestionariSpringApplication--640 - No active profile set, falling back to 1 default profile: "default"
+2022-06-23 09:13:23,950 || INFO  i.f.q.GestionequestionariSpringApplication--61 - Started GestionequestionariSpringApplication in 10.571 seconds (JVM running for 12.118)
+2022-06-23 09:15:13,846 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:17:11,175 || DEBUG i.f.q.repository.JDBCRepository--35 - Repository: Utente Utente [id=null, nome=prova, cognome=prvoa, ruolo=candidato, password=$2a$10$CbE6DZuJ96xolbKpj2MQ8e74RSi0fy6AS8Spbp.gbhcqAAIPTiDny, email=prova@]
+2022-06-23 09:17:15,612 || DEBUG i.f.q.repository.JDBCRepository--53 - Repository: email utente: prova@
+2022-06-23 09:17:16,238 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:17:20,583 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:17:23,796 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 09:17:29,912 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 09:17:29,921 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=jdfg, id_questionario=null]
+2022-06-23 09:17:29,949 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=2]
+2022-06-23 09:17:36,777 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:17:45,372 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:17:53,479 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:17:55,143 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:17:59,676 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:18:06,426 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:18:08,521 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:18:25,679 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 09:18:25,679 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=jdfg, id_questionario=null]
+2022-06-23 09:18:25,707 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=4]
+2022-06-23 09:22:56,865 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:24:58,734 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:25:04,539 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:26:23,068 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:26:31,517 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:26:33,756 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:26:35,218 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 09:26:37,629 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 09:26:37,628 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=jdfg, id_questionario=null]
+2022-06-23 09:26:37,666 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=2]
+2022-06-23 09:26:44,622 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:27:11,205 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:27:36,241 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=jdfg, id_questionario=null]
+2022-06-23 09:27:36,243 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 09:27:36,278 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=4]
+2022-06-23 09:28:01,011 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:30:13,439 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:30:22,076 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:30:25,746 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 09:30:28,373 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 09:30:28,375 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=jdfg, id_questionario=1]
+2022-06-23 09:30:28,401 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=2]
+2022-06-23 09:30:51,120 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:30:54,381 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:31:26,859 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 09:31:26,860 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=jdfg, id_questionario=1]
+2022-06-23 09:31:26,875 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=4]
+2022-06-23 09:31:28,161 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 09:31:30,496 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=jdfg, id_questionario=1]
+2022-06-23 09:31:30,496 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 09:31:30,519 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=2]
+2022-06-23 09:31:43,286 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:31:46,472 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:32:29,886 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 09:32:29,887 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=jdfg, id_questionario=1]
+2022-06-23 09:32:29,910 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=4]
+2022-06-23 09:33:25,853 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:33:28,430 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:34:49,950 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:35:09,784 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:35:10,747 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:35:12,006 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 09:35:14,590 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=jdfg, id_questionario=1]
+2022-06-23 09:35:14,594 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 09:35:14,631 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=2]
+2022-06-23 09:35:20,844 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:35:23,981 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:35:44,367 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:36:14,011 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=jdfg, id_questionario=1]
+2022-06-23 09:36:14,019 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 09:36:14,078 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=4]
+2022-06-23 09:37:17,324 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:37:47,652 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:38:06,872 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:38:09,407 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:38:11,097 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 09:38:13,125 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 09:38:13,126 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=jdfg, id_questionario=1]
+2022-06-23 09:38:13,156 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=2]
+2022-06-23 09:38:16,733 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:38:19,610 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:38:36,390 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:38:37,800 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:38:39,172 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 09:39:10,238 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:39:14,496 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:39:15,693 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 09:39:17,976 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=jdfg, id_questionario=1]
+2022-06-23 09:39:17,976 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 09:39:18,003 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=2]
+2022-06-23 09:39:22,879 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:39:28,606 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:40:16,966 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 09:40:16,967 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=jdfg, id_questionario=1]
+2022-06-23 09:40:16,984 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=4]
+2022-06-23 09:40:50,309 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:41:28,600 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:41:51,155 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:41:52,663 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:41:53,830 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 09:41:55,924 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=jdfg, id_questionario=1]
+2022-06-23 09:41:55,924 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 09:41:55,946 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=2]
+2022-06-23 09:41:59,316 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:42:08,781 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:42:13,632 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:42:48,909 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:42:50,572 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:42:51,888 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 09:42:54,071 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=jdfg, id_questionario=1]
+2022-06-23 09:42:54,072 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 09:42:54,096 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=2]
+2022-06-23 09:42:57,647 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:43:53,007 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 09:43:53,008 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=jdfg, id_questionario=1]
+2022-06-23 09:43:53,041 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=4]
+2022-06-23 09:48:12,991 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:48:37,455 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:48:38,791 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:48:47,416 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 09:48:49,777 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 09:48:49,781 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=jdfg, id_questionario=1]
+2022-06-23 09:48:49,815 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=2]
+2022-06-23 09:49:49,092 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=jdfg, id_questionario=1]
+2022-06-23 09:49:49,095 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 09:49:49,118 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=4]
+2022-06-23 09:52:48,945 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:52:51,440 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 09:52:57,769 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 09:53:01,046 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 09:53:01,046 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=jdfg, id_questionario=1]
+2022-06-23 09:53:01,074 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=2]
+2022-06-23 09:53:59,125 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=jdfg, id_questionario=1]
+2022-06-23 09:53:59,126 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 09:53:59,161 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=4]
+2022-06-23 09:55:03,214 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=0, id_utente=2, risposta=string, id_questionario=1]
+2022-06-23 09:59:14,923 || INFO  i.f.q.GestionequestionariSpringApplication--55 - Starting GestionequestionariSpringApplication using Java 16.0.2 on ITSAR-ND6375HH5 with PID 15964 (C:\Users\FrancoCeruti\Desktop\Questionario\gestionequestionari-spring-boot\target\classes started by FrancoCeruti in C:\Users\FrancoCeruti\Desktop\Questionario\gestionequestionari-spring-boot)
+2022-06-23 09:59:14,924 || DEBUG i.f.q.GestionequestionariSpringApplication--56 - Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-06-23 09:59:14,925 || INFO  i.f.q.GestionequestionariSpringApplication--640 - No active profile set, falling back to 1 default profile: "default"
+2022-06-23 09:59:31,532 || INFO  i.f.q.GestionequestionariSpringApplication--61 - Started GestionequestionariSpringApplication in 17.143 seconds (JVM running for 18.978)
+2022-06-23 10:06:12,319 || INFO  i.f.q.GestionequestionariSpringApplication--55 - Starting GestionequestionariSpringApplication using Java 16.0.2 on ITSAR-ND6375HH5 with PID 15964 (C:\Users\FrancoCeruti\Desktop\Questionario\gestionequestionari-spring-boot\target\classes started by FrancoCeruti in C:\Users\FrancoCeruti\Desktop\Questionario\gestionequestionari-spring-boot)
+2022-06-23 10:06:12,319 || DEBUG i.f.q.GestionequestionariSpringApplication--56 - Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-06-23 10:06:12,319 || INFO  i.f.q.GestionequestionariSpringApplication--640 - No active profile set, falling back to 1 default profile: "default"
+2022-06-23 10:06:14,137 || INFO  i.f.q.GestionequestionariSpringApplication--61 - Started GestionequestionariSpringApplication in 1.871 seconds (JVM running for 421.531)
+2022-06-23 10:06:25,646 || INFO  i.f.q.GestionequestionariSpringApplication--55 - Starting GestionequestionariSpringApplication using Java 16.0.2 on ITSAR-ND6375HH5 with PID 6364 (C:\Users\FrancoCeruti\Desktop\Questionario\gestionequestionari-spring-boot\target\classes started by FrancoCeruti in C:\Users\FrancoCeruti\Desktop\Questionario\gestionequestionari-spring-boot)
+2022-06-23 10:06:25,647 || DEBUG i.f.q.GestionequestionariSpringApplication--56 - Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-06-23 10:06:25,648 || INFO  i.f.q.GestionequestionariSpringApplication--640 - No active profile set, falling back to 1 default profile: "default"
+2022-06-23 10:06:41,206 || INFO  i.f.q.GestionequestionariSpringApplication--61 - Started GestionequestionariSpringApplication in 15.971 seconds (JVM running for 17.366)
+2022-06-23 10:10:01,761 || DEBUG i.f.q.repository.JDBCRepository--205 - Repository:tutte le risposte
+2022-06-23 10:11:07,394 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:11:13,508 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:11:24,811 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 10:11:27,894 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 10:11:27,953 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=a, id_questionario=1]
+2022-06-23 10:11:27,953 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=1]
+2022-06-23 10:11:39,698 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:11:39,804 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:11:40,051 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:12:11,899 || DEBUG i.f.q.repository.JDBCRepository--35 - Repository: Utente Utente [id=null, nome=dio, cognome=aisd, ruolo=candidato, password=$2a$10$sp7ZCVGf10OZo/lgDvpQXu4D3qVRAGtcYlct7o5FMh0JhKgilJpMK, email=a@]
+2022-06-23 10:12:20,110 || DEBUG i.f.q.repository.JDBCRepository--53 - Repository: email utente: a@
+2022-06-23 10:12:20,692 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:12:25,522 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:12:25,833 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 10:12:25,834 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=a, id_questionario=1]
+2022-06-23 10:12:25,865 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=2]
+2022-06-23 10:12:26,749 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 10:12:28,910 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 10:12:28,911 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=a, id_questionario=1]
+2022-06-23 10:12:28,953 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=3, id_questionario=1, punteggio=1]
+2022-06-23 10:13:04,070 || DEBUG i.f.q.repository.JDBCRepository--205 - Repository:tutte le risposte
+2022-06-23 10:13:28,246 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=3, risposta=string, id_questionario=1]
+2022-06-23 10:13:28,286 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=a, id_questionario=1]
+2022-06-23 10:13:28,287 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 10:13:28,314 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=3, id_questionario=1, punteggio=2]
+2022-06-23 10:13:39,458 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:13:42,925 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:13:44,383 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 10:13:55,228 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 10:13:55,228 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=a, id_questionario=1]
+2022-06-23 10:13:55,262 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=3, id_questionario=1, punteggio=1]
+2022-06-23 10:14:46,282 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=a, id_questionario=1]
+2022-06-23 10:14:46,282 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 10:14:46,305 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=3, id_questionario=1, punteggio=2]
+2022-06-23 10:15:28,157 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:15:31,592 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:15:32,729 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 10:15:35,640 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=a, id_questionario=1]
+2022-06-23 10:15:35,648 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 10:15:35,674 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=3, id_questionario=1, punteggio=1]
+2022-06-23 10:16:34,281 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 10:16:34,282 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=a, id_questionario=1]
+2022-06-23 10:16:34,303 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=3, id_questionario=1, punteggio=2]
+2022-06-23 10:17:26,493 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:17:30,801 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:20:06,220 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 10:20:08,464 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=a, id_questionario=1]
+2022-06-23 10:20:08,465 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 10:20:08,504 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=3, id_questionario=1, punteggio=1]
+2022-06-23 10:21:07,424 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=a, id_questionario=1]
+2022-06-23 10:21:07,430 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 10:21:07,463 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=3, id_questionario=1, punteggio=2]
+2022-06-23 10:21:30,094 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:21:36,522 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:21:44,426 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 10:21:47,053 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 10:21:47,095 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=3, id_questionario=1, punteggio=0]
+2022-06-23 10:22:46,678 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 10:22:46,759 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=3, id_questionario=1, punteggio=0]
+2022-06-23 10:25:56,370 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:25:59,825 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:26:02,099 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 10:26:04,497 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 10:26:04,527 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=3, id_questionario=1, punteggio=0]
+2022-06-23 10:27:03,350 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 10:27:03,369 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=3, id_questionario=1, punteggio=0]
+2022-06-23 10:27:09,042 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:27:12,418 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:27:13,566 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 10:27:25,874 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 10:27:25,907 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=3, id_questionario=1, punteggio=0]
+2022-06-23 10:27:39,383 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:27:42,937 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:27:44,544 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 10:27:46,915 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 10:27:46,954 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=3, id_questionario=1, punteggio=0]
+2022-06-23 10:28:15,352 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 10:28:15,372 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=3, id_questionario=1, punteggio=0]
+2022-06-23 10:28:46,406 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 10:28:46,428 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=3, id_questionario=1, punteggio=0]
+2022-06-23 10:28:51,242 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:28:54,394 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:28:57,529 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 10:29:43,884 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:29:47,263 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:29:48,405 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 10:30:49,432 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 10:30:49,463 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=3, id_questionario=1, punteggio=0]
+2022-06-23 10:30:53,404 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:30:57,001 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:30:58,191 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 10:31:26,789 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:31:28,532 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:31:30,077 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 10:32:31,107 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 10:32:31,139 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=3, id_questionario=1, punteggio=1]
+2022-06-23 10:33:16,026 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:33:18,499 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:33:19,824 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 10:34:05,192 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:34:06,578 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:34:07,980 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 10:34:53,882 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:34:55,234 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:34:56,618 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 10:35:05,507 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=3, risposta=a, id_questionario=1]
+2022-06-23 10:35:05,508 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 10:35:05,544 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=3, id_questionario=1, punteggio=1]
+2022-06-23 10:35:09,378 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=3, risposta=a, id_questionario=1]
+2022-06-23 10:35:09,378 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 10:35:09,401 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=3, id_questionario=1, punteggio=1]
+2022-06-23 10:35:38,437 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:35:42,763 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:35:58,386 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 10:35:58,388 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=3, risposta=a, id_questionario=1]
+2022-06-23 10:35:58,401 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=3, id_questionario=1, punteggio=2]
+2022-06-23 10:37:21,597 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:37:24,416 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:38:52,526 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:38:59,298 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 10:39:05,668 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=3, risposta=a, id_questionario=1]
+2022-06-23 10:39:05,676 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 10:39:05,705 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=3, id_questionario=1, punteggio=1]
+2022-06-23 10:39:19,417 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:39:22,602 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:39:30,054 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:39:32,503 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:40:00,401 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 10:40:00,402 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=3, risposta=a, id_questionario=1]
+2022-06-23 10:40:00,421 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=3, id_questionario=1, punteggio=2]
+2022-06-23 10:40:34,231 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:41:07,737 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:41:12,047 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:41:15,008 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:41:53,326 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:41:56,591 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:41:58,492 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:41:59,449 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:42:01,625 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:42:02,854 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:42:04,097 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 10:42:05,998 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=3, risposta=a, id_questionario=1]
+2022-06-23 10:42:06,000 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 10:42:06,034 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=3, id_questionario=1, punteggio=1]
+2022-06-23 10:42:09,895 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:42:11,532 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:43:05,112 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=3, risposta=a, id_questionario=1]
+2022-06-23 10:43:05,112 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 10:43:05,142 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=3, id_questionario=1, punteggio=2]
+2022-06-23 10:44:38,857 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:47:39,030 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:51:53,900 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:55:27,715 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 10:56:35,058 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 11:02:39,958 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 11:02:43,726 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 11:02:45,184 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 11:02:46,308 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 11:02:46,386 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=3, id_questionario=2, punteggio=0]
+2022-06-23 11:02:47,514 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 11:03:46,466 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 11:03:46,486 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=3, id_questionario=2, punteggio=0]
+2022-06-23 11:35:27,785 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 11:35:32,637 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 11:35:35,756 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 11:35:37,029 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 11:35:43,032 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 11:35:44,648 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 11:35:46,094 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 11:35:49,367 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 11:35:49,370 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=3, risposta=4, id_questionario=1]
+2022-06-23 11:35:49,389 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=3, id_questionario=1, punteggio=0]
+2022-06-23 11:35:53,025 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 11:36:47,107 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 11:36:47,107 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=3, risposta=4, id_questionario=1]
+2022-06-23 11:36:47,127 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=3, id_questionario=1, punteggio=0]
+2022-06-23 11:38:05,916 || INFO  i.f.q.GestionequestionariSpringApplication--55 - Starting GestionequestionariSpringApplication using Java 16.0.2 on ITSAR-ND6375HH5 with PID 12128 (C:\Users\FrancoCeruti\Desktop\Questionario\gestionequestionari-spring-boot\target\classes started by FrancoCeruti in C:\Users\FrancoCeruti\Desktop\Questionario\gestionequestionari-spring-boot)
+2022-06-23 11:38:05,917 || DEBUG i.f.q.GestionequestionariSpringApplication--56 - Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-06-23 11:38:05,918 || INFO  i.f.q.GestionequestionariSpringApplication--640 - No active profile set, falling back to 1 default profile: "default"
+2022-06-23 11:38:23,577 || INFO  i.f.q.GestionequestionariSpringApplication--61 - Started GestionequestionariSpringApplication in 18.119 seconds (JVM running for 19.594)
+2022-06-23 11:38:55,698 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 11:39:23,605 || DEBUG i.f.q.repository.JDBCRepository--35 - Repository: Utente Utente [id=null, nome=marco, cognome=polo, ruolo=candidato, password=$2a$10$juhbWGIw9YLx3EnqOjPCU.X5MUeebPCppz9pwy4O2wE21nFaTZtNe, email=marcopolo@]
+2022-06-23 11:39:34,356 || DEBUG i.f.q.repository.JDBCRepository--35 - Repository: Utente Utente [id=null, nome=admin, cognome=admin, ruolo=candidato, password=$2a$10$PJ.1VXqD0pWHv/byF4V/VO.bosBWIWSQdtKfbCnzqFsrpb0K9Dk.W, email=admin@]
+2022-06-23 11:39:50,785 || DEBUG i.f.q.repository.JDBCRepository--53 - Repository: email utente: admin@
+2022-06-23 11:39:57,447 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 11:40:17,517 || DEBUG i.f.q.repository.JDBCRepository--35 - Repository: Utente Utente [id=null, nome=docente, cognome=docente, ruolo=docente, password=$2a$10$pgDEcNLNFvVUzqFSs6slauwtmMuCOTZ8WQV34ikI81MoX9uVTmJQi, email=docente@]
+2022-06-23 11:40:52,373 || DEBUG i.f.q.repository.JDBCRepository--35 - Repository: Utente Utente [id=null, nome=docente, cognome=docente, ruolo=docente, password=$2a$10$3PrXv90ApxbQSQSLmYbbzeJ48Wjh2Gp.XtUGyHsKTOGIyiQr1c3UG, email=docente@]
+2022-06-23 11:41:08,115 || DEBUG i.f.q.repository.JDBCRepository--41 - Repository:tutti gli utenti
+2022-06-23 11:41:19,104 || DEBUG i.f.q.repository.JDBCRepository--53 - Repository: email utente: docente@
+2022-06-23 11:41:26,005 || DEBUG i.f.q.repository.JDBCRepository--72 - Repository:tutti i questionari
+2022-06-23 11:43:02,657 || DEBUG i.f.q.repository.JDBCRepository--60 - Repository: Questionario Questionario [id=null, titolo=Prova sql, descrizione=breve prova su query, id_utente=4]
+2022-06-23 11:43:02,732 || DEBUG i.f.q.repository.JDBCRepository--87 - Repository: Domande Domande [id=null, domanda=comando per unire due colonne?, giusta=inner join, ris_uno=select, ris_due=insert table, ris_tre=drop table, punteggio=10, id_questionario=1]
+2022-06-23 11:43:02,732 || DEBUG i.f.q.repository.JDBCRepository--87 - Repository: Domande Domande [id=null, domanda=comando per selezionare e visualizzare un campo, giusta=select, ris_uno=like, ris_due=where, ris_tre=alter table, punteggio=10, id_questionario=1]
+2022-06-23 11:43:04,609 || DEBUG i.f.q.repository.JDBCRepository--72 - Repository:tutti i questionari
+2022-06-23 11:43:20,420 || DEBUG i.f.q.repository.JDBCRepository--53 - Repository: email utente: marcopolo@
+2022-06-23 11:43:20,584 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 11:43:27,277 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 11:43:28,389 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 11:43:33,039 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 11:43:53,197 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 11:43:53,198 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=where, id_questionario=2]
+2022-06-23 11:43:53,198 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=inner join, id_questionario=1]
+2022-06-23 11:43:53,221 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=1, id_questionario=1, punteggio=10]
+2022-06-23 11:43:56,790 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 11:44:34,520 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=where, id_questionario=2]
+2022-06-23 11:44:34,520 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=inner join, id_questionario=1]
+2022-06-23 11:44:34,522 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 11:44:34,545 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=1, id_questionario=1, punteggio=20]
+2022-06-23 11:46:39,508 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 11:46:42,177 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 11:46:43,520 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 11:46:50,165 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=inner join, id_questionario=1]
+2022-06-23 11:46:50,167 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=select, id_questionario=2]
+2022-06-23 11:46:50,170 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 11:46:50,192 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=1, id_questionario=1, punteggio=10]
+2022-06-23 11:46:53,052 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 11:46:58,311 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 11:47:01,996 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 11:47:03,926 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 11:47:16,337 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=inner join, id_questionario=1]
+2022-06-23 11:47:16,340 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=select, id_questionario=2]
+2022-06-23 11:47:16,349 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 11:47:16,372 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=1, id_questionario=1, punteggio=10]
+2022-06-23 11:47:44,548 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=inner join, id_questionario=1]
+2022-06-23 11:47:44,549 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=select, id_questionario=2]
+2022-06-23 11:47:44,554 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 11:47:44,592 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=1, id_questionario=1, punteggio=20]
+2022-06-23 11:48:05,525 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=inner join, id_questionario=1]
+2022-06-23 11:48:05,526 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=select, id_questionario=2]
+2022-06-23 11:48:05,533 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 11:48:05,556 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=1, id_questionario=1, punteggio=20]
+2022-06-23 11:48:18,307 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 11:48:21,467 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 11:48:29,721 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 11:48:35,345 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=select, id_questionario=2]
+2022-06-23 11:48:35,346 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=inner join, id_questionario=1]
+2022-06-23 11:48:35,354 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 11:48:35,390 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=1, id_questionario=1, punteggio=10]
+2022-06-23 11:49:31,531 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=inner join, id_questionario=1]
+2022-06-23 11:49:31,541 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=1, risposta=select, id_questionario=2]
+2022-06-23 11:49:31,543 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 11:49:31,568 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=1, id_questionario=1, punteggio=20]
+2022-06-23 11:50:36,258 || INFO  i.f.q.GestionequestionariSpringApplication--55 - Starting GestionequestionariSpringApplication using Java 16.0.2 on ITSAR-ND6375HH5 with PID 10300 (C:\Users\FrancoCeruti\Desktop\Questionario\gestionequestionari-spring-boot\target\classes started by FrancoCeruti in C:\Users\FrancoCeruti\Desktop\Questionario\gestionequestionari-spring-boot)
+2022-06-23 11:50:36,259 || DEBUG i.f.q.GestionequestionariSpringApplication--56 - Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-06-23 11:50:36,260 || INFO  i.f.q.GestionequestionariSpringApplication--640 - No active profile set, falling back to 1 default profile: "default"
+2022-06-23 11:50:52,697 || INFO  i.f.q.GestionequestionariSpringApplication--61 - Started GestionequestionariSpringApplication in 16.85 seconds (JVM running for 18.256)
+2022-06-23 11:53:00,606 || INFO  i.f.q.GestionequestionariSpringApplication--55 - Starting GestionequestionariSpringApplication using Java 16.0.2 on ITSAR-ND6375HH5 with PID 10300 (C:\Users\FrancoCeruti\Desktop\Questionario\gestionequestionari-spring-boot\target\classes started by FrancoCeruti in C:\Users\FrancoCeruti\Desktop\Questionario\gestionequestionari-spring-boot)
+2022-06-23 11:53:00,606 || DEBUG i.f.q.GestionequestionariSpringApplication--56 - Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-06-23 11:53:00,607 || INFO  i.f.q.GestionequestionariSpringApplication--640 - No active profile set, falling back to 1 default profile: "default"
+2022-06-23 11:53:02,365 || INFO  i.f.q.GestionequestionariSpringApplication--61 - Started GestionequestionariSpringApplication in 1.825 seconds (JVM running for 147.923)
+2022-06-23 11:53:17,218 || INFO  i.f.q.GestionequestionariSpringApplication--55 - Starting GestionequestionariSpringApplication using Java 16.0.2 on ITSAR-ND6375HH5 with PID 13904 (C:\Users\FrancoCeruti\Desktop\Questionario\gestionequestionari-spring-boot\target\classes started by FrancoCeruti in C:\Users\FrancoCeruti\Desktop\Questionario\gestionequestionari-spring-boot)
+2022-06-23 11:53:17,219 || DEBUG i.f.q.GestionequestionariSpringApplication--56 - Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-06-23 11:53:17,220 || INFO  i.f.q.GestionequestionariSpringApplication--640 - No active profile set, falling back to 1 default profile: "default"
+2022-06-23 11:53:34,397 || INFO  i.f.q.GestionequestionariSpringApplication--61 - Started GestionequestionariSpringApplication in 17.622 seconds (JVM running for 18.883)
+2022-06-23 11:54:17,813 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 11:54:32,299 || DEBUG i.f.q.repository.JDBCRepository--35 - Repository: Utente Utente [id=null, nome=doc, cognome=doc, ruolo=candidato, password=$2a$10$q4/o8uLsMobN7DIq0b6PxOmJrIjeYquPn5cTTO2rMoTOnzKO6e/FS, email=doc@]
+2022-06-23 11:54:42,777 || DEBUG i.f.q.repository.JDBCRepository--35 - Repository: Utente Utente [id=null, nome=can, cognome=can, ruolo=candidato, password=$2a$10$2Drg4wA91TG9QI6iGpLjreus2orDxo52/.PfcslXhEum.lr6pOAQ6, email=can@]
+2022-06-23 11:55:01,378 || DEBUG i.f.q.repository.JDBCRepository--53 - Repository: email utente: doc@
+2022-06-23 11:55:52,846 || DEBUG i.f.q.repository.JDBCRepository--60 - Repository: Questionario Questionario [id=null, titolo=prova, descrizione=test, id_utente=1]
+2022-06-23 11:55:52,927 || DEBUG i.f.q.repository.JDBCRepository--87 - Repository: Domande Domande [id=null, domanda=domanda 2, giusta=giusta, ris_uno=2, ris_due=3, ris_tre=4, punteggio=10, id_questionario=1]
+2022-06-23 11:55:52,928 || DEBUG i.f.q.repository.JDBCRepository--87 - Repository: Domande Domande [id=null, domanda=domanda 1, giusta=giusta, ris_uno=111, ris_due=22, ris_tre=33, punteggio=10, id_questionario=1]
+2022-06-23 11:55:54,752 || DEBUG i.f.q.repository.JDBCRepository--72 - Repository:tutti i questionari
+2022-06-23 11:56:02,671 || DEBUG i.f.q.repository.JDBCRepository--53 - Repository: email utente: can@
+2022-06-23 11:56:02,831 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 11:56:07,550 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 11:56:08,852 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 11:56:21,192 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=2]
+2022-06-23 11:56:21,192 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 11:56:21,195 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 11:56:21,220 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=20]
+2022-06-23 11:56:57,502 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 11:57:02,637 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 11:57:05,645 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 11:57:10,447 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=2]
+2022-06-23 11:57:10,449 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 11:57:10,457 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 11:57:10,487 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=40]
+2022-06-23 11:57:12,840 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 11:57:24,253 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 11:57:24,260 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=111, id_questionario=2]
+2022-06-23 11:57:24,261 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 11:57:24,291 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=10]
+2022-06-23 11:58:14,532 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 11:58:14,534 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=111, id_questionario=2]
+2022-06-23 11:58:14,539 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 11:58:14,572 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=20]
+2022-06-23 11:59:34,370 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 11:59:37,856 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 11:59:39,756 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 11:59:46,028 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 11:59:46,030 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 11:59:46,038 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=2]
+2022-06-23 11:59:46,039 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=2]
+2022-06-23 11:59:46,046 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 11:59:46,075 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=20]
+2022-06-23 12:00:41,528 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 12:00:41,529 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 12:00:41,539 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=2]
+2022-06-23 12:00:41,546 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=2]
+2022-06-23 12:00:41,553 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 12:00:41,572 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=40]
+2022-06-23 12:01:08,089 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 12:01:10,928 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 12:01:13,379 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 12:01:21,836 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=2]
+2022-06-23 12:01:21,841 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 12:01:21,842 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 12:01:21,848 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=2]
+2022-06-23 12:01:21,849 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 12:01:21,870 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=20]
+2022-06-23 12:02:14,532 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 12:02:14,535 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=2]
+2022-06-23 12:02:14,545 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 12:02:14,549 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=2]
+2022-06-23 12:02:14,557 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 12:02:14,581 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=40]
+2022-06-23 12:02:30,080 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 12:02:33,732 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 12:02:35,149 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 12:02:40,990 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 12:02:41,000 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=2]
+2022-06-23 12:02:41,013 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 12:02:41,015 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=2]
+2022-06-23 12:02:41,027 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 12:02:41,055 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=20]
+2022-06-23 12:03:36,531 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 12:03:36,533 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=2]
+2022-06-23 12:03:36,545 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 12:03:36,551 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=2]
+2022-06-23 12:03:36,558 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 12:03:36,583 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=40]
+2022-06-23 12:04:34,189 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 12:04:43,327 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 12:04:45,976 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 12:04:52,216 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 12:04:52,216 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=2]
+2022-06-23 12:04:52,221 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 12:04:52,242 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=20]
+2022-06-23 12:05:00,998 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 12:05:06,739 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 12:05:18,227 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 12:05:21,506 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 12:05:22,772 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 12:05:30,010 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=3, id_questionario=1]
+2022-06-23 12:05:30,011 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=2]
+2022-06-23 12:05:30,011 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 12:05:30,032 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=10]
+2022-06-23 12:05:31,528 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 12:05:35,288 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 12:05:47,531 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 12:05:47,531 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=2]
+2022-06-23 12:05:47,532 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 12:05:47,556 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=40]
+2022-06-23 12:05:54,021 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 12:06:07,010 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 12:06:11,145 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 12:06:14,953 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 12:06:19,798 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 12:07:21,547 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 12:07:21,565 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=0]
+2022-06-23 12:08:16,000 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 12:08:19,575 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 12:08:31,933 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 12:08:33,444 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 12:08:54,401 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 12:08:56,355 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 12:09:17,416 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 12:10:07,684 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 12:10:10,697 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 12:10:13,068 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 12:10:14,702 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 12:10:20,727 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 12:10:20,732 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=2, id_questionario=1]
+2022-06-23 12:10:20,732 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=111, id_questionario=2]
+2022-06-23 12:10:20,750 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=0]
+2022-06-23 12:10:29,257 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 12:10:34,236 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 12:11:15,711 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=111, id_questionario=2]
+2022-06-23 12:11:15,711 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=2, id_questionario=1]
+2022-06-23 12:11:15,715 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 12:11:15,736 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=0]
+2022-06-23 13:59:28,219 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 13:59:31,121 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 13:59:33,127 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 13:59:40,770 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:03:01,190 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:03:36,353 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:03:37,529 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:03:39,359 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:04:10,494 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:04:12,318 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:04:13,744 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:04:42,830 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:04:44,052 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:04:46,957 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:04:53,105 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 14:04:53,106 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 14:04:53,106 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=22, id_questionario=2]
+2022-06-23 14:04:53,134 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=10]
+2022-06-23 14:05:30,887 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:05:35,166 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:05:36,385 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:05:43,559 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=2]
+2022-06-23 14:05:43,558 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 14:05:43,560 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=111, id_questionario=2]
+2022-06-23 14:05:43,571 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 14:05:43,594 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=20]
+2022-06-23 14:06:40,172 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:06:43,518 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:06:46,317 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:06:58,033 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 14:06:58,033 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 14:06:58,034 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=111, id_questionario=2]
+2022-06-23 14:06:58,053 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=10]
+2022-06-23 14:07:16,704 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:07:19,574 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:07:21,083 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:07:51,557 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:07:53,207 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:07:54,320 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:07:59,925 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 14:07:59,926 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=111, id_questionario=2]
+2022-06-23 14:07:59,926 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 14:07:59,946 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=10]
+2022-06-23 14:08:11,834 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:08:16,313 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:11:32,269 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:11:33,805 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:11:34,873 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:11:42,229 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=111, id_questionario=2]
+2022-06-23 14:11:42,229 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 14:11:42,232 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 14:11:42,255 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=10]
+2022-06-23 14:13:11,273 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:13:14,000 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:13:15,446 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:16:37,530 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:16:38,902 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:16:40,302 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:17:00,813 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:17:02,353 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:17:03,742 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:17:06,076 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:17:24,268 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:17:25,323 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:17:26,767 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:17:34,277 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 14:17:34,277 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=111, id_questionario=2]
+2022-06-23 14:17:34,280 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 14:17:34,299 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=10]
+2022-06-23 14:18:09,945 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:18:12,698 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:18:13,917 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:18:20,454 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 14:18:20,455 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=111, id_questionario=2]
+2022-06-23 14:18:20,456 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 14:18:20,477 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=10]
+2022-06-23 14:19:39,183 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:19:42,356 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:19:43,477 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:19:48,405 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 14:19:48,405 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 14:19:48,406 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=111, id_questionario=2]
+2022-06-23 14:19:48,426 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=10]
+2022-06-23 14:20:02,359 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:20:06,721 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:20:10,231 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:20:13,614 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:23:58,337 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:24:03,620 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:24:04,661 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:24:11,866 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 14:24:11,867 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 14:24:11,867 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=111, id_questionario=2]
+2022-06-23 14:24:11,888 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=10]
+2022-06-23 14:24:40,585 || DEBUG i.f.q.repository.JDBCRepository--205 - Repository:tutte le risposte
+2022-06-23 14:25:06,317 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:25:08,972 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:25:11,221 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:25:18,015 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 14:25:18,016 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=111, id_questionario=2]
+2022-06-23 14:25:18,023 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 14:25:18,055 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=10]
+2022-06-23 14:26:24,148 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:26:27,266 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:26:28,474 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:26:34,728 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 14:26:34,728 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=2, id_utente=2, risposta=111, id_questionario=1]
+2022-06-23 14:26:34,732 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 14:26:34,763 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=10]
+2022-06-23 14:27:57,527 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:28:00,765 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:28:01,796 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:28:07,379 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 14:28:07,381 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=2, id_utente=2, risposta=111, id_questionario=1]
+2022-06-23 14:28:07,396 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 14:28:07,416 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=10]
+2022-06-23 14:28:19,095 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:28:22,285 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:28:23,977 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:28:55,165 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:28:56,642 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:28:57,934 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:29:04,880 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 14:29:04,880 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=2, id_utente=2, risposta=33, id_questionario=1]
+2022-06-23 14:29:04,880 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 14:29:04,901 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=10]
+2022-06-23 14:30:33,521 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:30:37,520 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:30:38,551 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:30:43,324 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 14:30:43,324 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=2, id_utente=2, risposta=22, id_questionario=1]
+2022-06-23 14:30:43,325 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 14:30:43,355 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=10]
+2022-06-23 14:31:08,499 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:31:12,283 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:31:15,223 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:31:16,489 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:31:22,195 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=2, id_utente=2, risposta=22, id_questionario=1]
+2022-06-23 14:31:22,196 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 14:31:22,203 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 14:31:22,237 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=10]
+2022-06-23 14:31:28,187 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:31:42,091 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:31:46,232 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:31:48,251 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:31:58,561 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 14:31:58,562 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 14:31:58,563 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=2, id_utente=2, risposta=111, id_questionario=1]
+2022-06-23 14:31:58,588 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=10]
+2022-06-23 14:32:07,360 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:32:10,744 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:32:11,809 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:32:17,678 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=2, id_utente=2, risposta=22, id_questionario=1]
+2022-06-23 14:32:17,678 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=2, id_questionario=1]
+2022-06-23 14:32:17,685 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 14:32:17,702 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=0]
+2022-06-23 14:39:42,672 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:39:45,669 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:39:47,266 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:39:54,857 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 14:39:54,857 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=2, id_utente=2, risposta=33, id_questionario=1]
+2022-06-23 14:39:54,857 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=2, id_questionario=1]
+2022-06-23 14:39:54,890 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=0]
+2022-06-23 14:41:00,504 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:41:03,607 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:41:05,436 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:41:12,161 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 14:41:12,161 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=2, id_utente=2, risposta=33, id_questionario=1]
+2022-06-23 14:41:12,163 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 14:41:12,182 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=10]
+2022-06-23 14:42:22,381 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:42:37,457 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:42:40,696 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:42:41,874 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:44:46,756 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:44:50,563 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:44:51,181 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:44:52,343 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:44:59,496 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=3, id_questionario=1]
+2022-06-23 14:44:59,496 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 14:44:59,495 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=2, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 14:44:59,518 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=10]
+2022-06-23 14:45:34,889 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:45:37,690 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:45:38,782 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:45:44,833 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=2, id_questionario=1]
+2022-06-23 14:45:44,833 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 14:45:44,834 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=2, id_utente=2, risposta=33, id_questionario=1]
+2022-06-23 14:45:44,855 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=0]
+2022-06-23 14:46:01,731 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:46:05,642 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:46:08,879 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:46:10,382 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:46:15,776 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 14:46:15,776 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=2, id_utente=2, risposta=22, id_questionario=1]
+2022-06-23 14:46:15,783 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 14:46:15,802 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=10]
+2022-06-23 14:46:40,427 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:46:43,168 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:46:44,270 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:46:49,542 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=2, id_questionario=1]
+2022-06-23 14:46:49,542 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=2, id_utente=2, risposta=111, id_questionario=1]
+2022-06-23 14:46:49,542 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 14:46:49,569 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=0]
+2022-06-23 14:47:45,298 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:47:48,071 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:47:49,133 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:47:54,666 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=2, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 14:47:54,666 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=2, id_questionario=1]
+2022-06-23 14:47:54,669 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 14:47:54,690 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=10]
+2022-06-23 14:48:15,194 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:48:55,100 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:48:58,134 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:49:00,364 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:49:06,071 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 14:49:06,071 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=2, id_utente=2, risposta=111, id_questionario=1]
+2022-06-23 14:49:06,071 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 14:49:06,093 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=10]
+2022-06-23 14:50:21,796 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:50:25,275 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:50:26,306 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:50:31,714 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=2, id_questionario=1]
+2022-06-23 14:50:31,714 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=2, id_utente=2, risposta=111, id_questionario=1]
+2022-06-23 14:50:31,715 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 14:50:31,734 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=0]
+2022-06-23 14:51:51,153 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:51:53,853 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:51:54,921 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:52:01,370 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=2, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 14:52:01,370 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=2, id_questionario=1]
+2022-06-23 14:52:01,375 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 14:52:01,394 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=10]
+2022-06-23 14:53:39,412 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:53:44,188 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:53:49,077 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:53:51,085 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:53:56,226 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=2, id_utente=2, risposta=22, id_questionario=1]
+2022-06-23 14:53:56,226 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 14:53:56,227 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 14:53:56,249 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=10]
+2022-06-23 14:54:09,149 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:54:12,936 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:54:14,636 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:54:20,330 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=2, id_utente=2, risposta=22, id_questionario=1]
+2022-06-23 14:54:20,330 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 14:54:20,330 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 14:54:20,351 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=10]
+2022-06-23 14:54:26,676 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:54:29,873 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:55:36,676 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:55:37,824 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:55:38,986 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:55:46,400 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 14:55:46,400 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=2, id_utente=2, risposta=22, id_questionario=1]
+2022-06-23 14:55:46,402 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 14:55:46,422 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=10]
+2022-06-23 14:55:58,891 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:56:01,667 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:56:04,012 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:56:05,135 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:56:05,953 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:56:11,444 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=3, id_questionario=1]
+2022-06-23 14:56:11,445 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 14:56:11,445 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=2, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 14:56:11,464 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=10]
+2022-06-23 14:56:19,006 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:56:22,469 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 14:56:23,983 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 14:56:29,510 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=2, id_questionario=1]
+2022-06-23 14:56:29,510 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 14:56:29,510 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=2, id_utente=2, risposta=111, id_questionario=1]
+2022-06-23 14:56:29,533 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=0]
+2022-06-23 15:07:20,206 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=3, id_questionario=1]
+2022-06-23 15:07:20,208 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=2, id_utente=2, risposta=giusta, id_questionario=1]
+2022-06-23 15:07:20,217 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=2, id_questionario=1]
+2022-06-23 15:07:20,219 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=2, id_utente=2, risposta=111, id_questionario=1]
+2022-06-23 15:07:20,224 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 15:07:20,247 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 15:07:20,259 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=20]
+2022-06-23 15:07:20,270 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=0]
+2022-06-23 15:07:22,938 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 15:07:26,125 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari
+2022-06-23 15:07:28,101 || DEBUG i.f.q.repository.JDBCRepository--100 - Repository:tutte le domande id del questionario
+2022-06-23 15:07:34,359 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=1, id_utente=2, risposta=2, id_questionario=1]
+2022-06-23 15:07:34,359 || DEBUG i.f.q.repository.JDBCRepository--198 - Repository: RisposteUtente RisposteUtente [id=2, id_utente=2, risposta=33, id_questionario=1]
+2022-06-23 15:07:34,359 || DEBUG i.f.q.repository.JDBCRepository--94 - Repository:tutte le domande
+2022-06-23 15:07:34,378 || DEBUG i.f.q.repository.JDBCRepository--122 - Repository: QuestionarioUtente QuestionarioUtente [id_utente=2, id_questionario=1, punteggio=0]
+2022-06-23 15:08:03,387 || DEBUG i.f.q.repository.JDBCRepository--66 - Repository:tutti i questionari

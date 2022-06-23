@@ -36,9 +36,10 @@ export class PageListaComponent implements OnInit{
   for(let i=0;i<this.size;i++){
     this.dropdown[i]=false
 
-    this.docente.getCountCandidati(this.questList[i].id_questionario).subscribe(data=>{
+    this.docente.getCountCandidati(this.questList[i].id).subscribe(data=>{
+      console.log(this.questList[i].id)
     this.nCand[i]=data
-    this.docente.getMediaPunteggi(this.questList[i].id_questionario).subscribe(data=>{
+    this.docente.getMediaPunteggi(this.questList[i].id).subscribe(data=>{
     this.media[i]=data
     if(this.media[i]<1){
       this.media[i]=0}
@@ -71,10 +72,10 @@ export class PageListaComponent implements OnInit{
       this.docente.getUserQuest(idque).subscribe(data=>{
         this.user=data
         for(let i =0;i<this.user.length;i++){
-          this.docente.punteggioUtente(idque,this.user[i].id_utente).subscribe(data=>{
+          this.docente.punteggioUtente(idque,this.user[i].id).subscribe(data=>{
             this.punteggi[i]=data
             console.log(this.user)
-            this.questserv.getPuntTot(this.questList[i].id_questionario).subscribe(data=>{
+            this.questserv.getPuntTot(this.questList[i].id).subscribe(data=>{
               this.pTot[i]=data
               console.log(this.pTot)
               })

@@ -8,7 +8,6 @@ import { UtenteService } from '../service/utente.service';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
-
 export class RegisterComponent implements OnInit {
   utente: Utente = new Utente();
   success=false

@@ -19,4 +19,8 @@ export class RiposteUtenteService {
     return this.httpClient.post(`${this.url}/questionarioutente`, questutente);
   }
 
+  deleteRispByUten(id_questionario: number,id_utente: number){
+    return this.httpClient.delete<number>(`${this.url}/deleteRisp/${id_questionario}/${id_utente}`)
+  }
+
 }
