@@ -20,7 +20,7 @@ import it.f2informatica.questionari.domain.Domande;
 import it.f2informatica.questionari.domain.Utente;
 import it.f2informatica.questionari.service.domandaInterface;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://192.168.1.230:4200")
 @RestController
 @RequestMapping("/api")
 public class DomandeController {

@@ -22,7 +22,7 @@ import io.swagger.annotations.ApiResponses;
 import it.f2informatica.questionari.domain.Utente;
 import it.f2informatica.questionari.service.utenteInterface;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://192.168.1.230:4200")
 @RestController
 @RequestMapping("/api")
 public class UtenteController {
