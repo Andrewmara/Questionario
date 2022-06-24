@@ -96,12 +96,13 @@ console.log(this.risposte)
             if (domande[i].giusta == this.risposte[j].risposta) {
               console.log("corretto")
               this.v=true
-              this.corretto[i]=true
+              this.corretto[j]=true
               this.punteggioTot += domande[i].punteggio;
             } else {
               console.log("sbagliata")
               this.v=true
-              this.corretto[i]=false
+              this.corretto[j]=false
+              console.log(this.corretto)
             }
           }
         }
