@@ -34,9 +34,11 @@ public class QuestionarioController {
 			@ApiResponse(code = 404, message = "NOT found") })
 	
 	@PostMapping(path="/questionari")
-	public int addQuest(@RequestBody Questionario newQuest) {
-     return this.questionarioRepository.saveQuest(newQuest);
+	public Long addQuest(@RequestBody Questionario newQuest) {
+      this.questionarioRepository.saveQuest(newQuest);
+      return this.questionarioRepository.idQuestionario(newQuest.getTitolo(), newQuest.getDescrizione(), newQuest.getId_utente());
 	}
+	
 	
 	@GetMapping(path="/questionari")
 	public List<Questionario> getQuest(){
@@ -47,5 +49,7 @@ public class QuestionarioController {
 	public List<Questionario> findQuestBydocente(@PathVariable Long id_utente){
 		return this.questionarioRepository.findQuestByDocente(id_utente);
 	}
+	
+	
 	
 }

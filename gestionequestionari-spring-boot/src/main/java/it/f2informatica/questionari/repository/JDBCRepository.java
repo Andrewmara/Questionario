@@ -56,9 +56,9 @@ public class JDBCRepository implements utenteInterface,questionarioInterface,dom
 
 //-------------Questionario----------------------
 	@Override
-	public int saveQuest(Questionario q) {
+	public Long saveQuest(Questionario q) {
 		logger.debug("Repository: Questionario {}",q);
-		return jdbcTemplate.update("INSERT INTO questionario(titolo,descrizione,id_utente) VALUE(?,?,?)",new Object[] {q.getTitolo(), q.getDescrizione(), q.getId_utente()});
+		return (long) jdbcTemplate.update("INSERT INTO questionario(titolo,descrizione,id_utente) VALUE(?,?,?)",new Object[] {q.getTitolo(), q.getDescrizione(), q.getId_utente()});
 	}
 
 	@Override
@@ -76,10 +76,10 @@ public class JDBCRepository implements utenteInterface,questionarioInterface,dom
 	}
 	
 	@Override
-	public Integer idQuestionario(String titolo,String descrizione,Utente docente) {
+	public Long idQuestionario(String titolo,String descrizione,Long docente) {
 		return jdbcTemplate.queryForObject("SELECT q.id\r\n"
 				+ "FROM questionario q\r\n"
-				+ "WHERE q.titolo = ? AND q.descrizione = ? AND q.id_utente = ?",Integer.class,titolo,descrizione,docente);
+				+ "WHERE q.titolo = ? AND q.descrizione = ? AND q.id_utente = ?",Long.class,titolo,descrizione,docente);
 	}
 //-------------Domande---------------------------
 	@Override

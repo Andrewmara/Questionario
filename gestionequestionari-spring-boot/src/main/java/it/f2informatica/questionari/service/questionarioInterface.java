@@ -9,12 +9,12 @@ import it.f2informatica.questionari.domain.Utente;
 
 public interface questionarioInterface {
 	
-int saveQuest(Questionario q);
+Long saveQuest(Questionario q);
 	
 	List<Questionario> findAllQuest();
 
 	List<Questionario> findQuestByDocente(Long docente);
 
-	Integer idQuestionario(String titolo, String descrizione, Utente utente);
+	Long idQuestionario(String titolo, String descrizione, Long utente);
 
 }

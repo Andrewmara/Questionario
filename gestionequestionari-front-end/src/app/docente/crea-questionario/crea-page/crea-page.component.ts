@@ -40,7 +40,8 @@ export class CreaPageComponent implements OnInit {
   length:number=0
   radio!:number
   idQuest!:any
-
+  idq!:any
+  interval!:any
   i!:number
   rispostagiusta:Array<string> = [];
   currentUser = JSON.parse(localStorage.getItem('loggedUser') || '{}');
@@ -101,12 +102,13 @@ export class CreaPageComponent implements OnInit {
 
   public richieste(form:any){
     console.group( "Richieste" );
+
     const titolo=form.value.titolo;
     const descrizione=form.value.descrizione;
     this.http.AddQuest(titolo,descrizione,this.currentUser.id).subscribe(data=>{
       this.idQuest=data
       console.log(titolo,descrizione)
-      console.log(data)
+
     for(let i=0;i<this.form.domande.length;i++){
       const domanda=this.form.domande[i].domanda
       const punteggio=this.form.domande[i].punteggio
@@ -115,7 +117,7 @@ export class CreaPageComponent implements OnInit {
       const risposta3=this.form.domande[i].risposta3
       const risposta4=this.form.domande[i].risposta4
       const rispostagiusta=this.form.domande[i].rispostagiusta
-      console.log(domanda,punteggio,risposta1,risposta2,risposta3,risposta4,rispostagiusta)
+      console.log(domanda,punteggio,risposta1,risposta2,risposta3,risposta4,rispostagiusta,this.idQuest)
 
           if(rispostagiusta==1){
           this.http.AddDomanda(domanda,this.idQuest,risposta1,risposta2,risposta3,risposta4,punteggio).subscribe(data=>{
@@ -140,8 +142,9 @@ export class CreaPageComponent implements OnInit {
             console.log(data)
           })
         }
-
     }
+
+
     form.reset()
     this.form = {
 			domande:[]
